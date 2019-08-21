@@ -22,7 +22,7 @@ return [
                     'port' => '3306',
                     'user'     => 'root',
                     'password' => '',
-                    'dbname' => 'vappo',
+                    'dbname' => 'realtec',
                     'driverOptions' => [
                         1002 => 'SET NAMES utf8'
                     ]

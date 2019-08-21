@@ -2,26 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d77c379d-08e5-433c-b1ea-c9983c51610e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/module/Inicial/src/Factory/IndexControllerFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/MateriaPrima/config/module.config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/MateriaPrima/src/Controller/IndexController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/MateriaPrima/src/Module.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/MateriaPrima/view/error/404.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/MateriaPrima/view/error/index.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/MateriaPrima/view/materia-prima/index/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/realtec-fabricacao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/realtec-fabricacao.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Entity/IEntity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Entity/Insumo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/MateriaPrima/src/Model/IModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/MateriaPrima/src/Model/MateriaPrima.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/autoload/global.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/autoload/global.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/modules.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/modules.config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Application/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Inicial/config/module.config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Inicial/src/Controller/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Application/src/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Inicial/src/Module.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Application/test/Controller/IndexControllerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Application/view/application/index/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Inicial/view/inicial/index/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Application/view/error/404.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Inicial/view/error/404.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Application/view/error/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Inicial/view/error/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Application/view/layout/layout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/layout/layout.phtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,38 +21,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexControllerFactory.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/Inicial/src/Factory/IndexControllerFactory.php">
+      <file leaf-file-name="MateriaPrima.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/module/MateriaPrima/src/Model/MateriaPrima.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="901">
+              <caret line="58" column="43" lean-forward="true" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+              <folding>
+                <element signature="e#121#152#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/MateriaPrima/src/Model/IModel.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-              <folding>
-                <element signature="e#117#148#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/Inicial/src/Controller/IndexController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-              <folding>
-                <element signature="e#311#342#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.config.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/module/Inicial/config/module.config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="45" column="78" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
-              <folding>
-                <element signature="e#300#343#0#PHP" expanded="true" />
-              </folding>
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -97,13 +68,19 @@
         <option value="$PROJECT_DIR$/config/modules.config.php" />
         <option value="$PROJECT_DIR$/module/MateriaPrima/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/module/MateriaPrima/src/Module.php" />
-        <option value="$PROJECT_DIR$/config/autoload/global.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/module/MateriaPrima/config/module.config.php" />
         <option value="$PROJECT_DIR$/module/Inicial/src/Factory/InicialControllerFactory.php" />
         <option value="$PROJECT_DIR$/module/Inicial/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/module/Inicial/src/Factory/IndexControllerFactory.php" />
         <option value="$PROJECT_DIR$/module/Inicial/config/module.config.php" />
+        <option value="$PROJECT_DIR$/config/autoload/global.php" />
+        <option value="$PROJECT_DIR$/cli-config.php" />
+        <option value="$PROJECT_DIR$/bootstrap.php" />
+        <option value="$PROJECT_DIR$/module/Entity/Insumo.php" />
+        <option value="$PROJECT_DIR$/module/MateriaPrima/src/Model/InsumoModel.php" />
+        <option value="$PROJECT_DIR$/module/MateriaPrima/src/Model/IModel.php" />
+        <option value="$PROJECT_DIR$/module/MateriaPrima/src/Model/MateriaPrima.php" />
       </list>
     </option>
   </component>
@@ -197,40 +174,42 @@
             <path>
               <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
               <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
               <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Inicial" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
               <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Inicial" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="MateriaPrima" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
               <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Inicial" type="462c0819:PsiDirectoryNode" />
+              <item name="MateriaPrima" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
               <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Inicial" type="462c0819:PsiDirectoryNode" />
+              <item name="MateriaPrima" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Factory" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="MateriaPrima" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -240,13 +219,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/xampp/htdocs/cline" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.PHP" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\MateriaPrima\src\Model" />
+      <recent name="C:\xampp2\htdocs\realtec-fabricacao" />
+      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Entity" />
       <recent name="C:\xampp2\htdocs\realtec-fabricacao\module" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -281,12 +264,12 @@
       <updated>1566328199688</updated>
       <workItem from="1566328201229" duration="4609000" />
       <workItem from="1566332947585" duration="1425000" />
-      <workItem from="1566407321954" duration="1690000" />
+      <workItem from="1566407321954" duration="6358000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7724000" />
+    <option name="totallyTimeSpent" value="12392000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="33" width="1550" height="838" extended-state="6" />
@@ -301,7 +284,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32965517" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.44" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -462,13 +445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/MateriaPrima/src/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/modules.config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -483,19 +459,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/autoload/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/MateriaPrima/config/module.config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
           <folding>
             <element signature="e#305#334#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Entity/IEntity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Inicial/config/module.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="45" column="78" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
+          <folding>
+            <element signature="e#300#343#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -520,12 +506,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Inicial/config/module.config.php">
+    <entry file="file://$PROJECT_DIR$/vendor/bin/doctrine">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/bin/doctrine.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/bin/doctrine">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/Console/ConsoleRunner.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="45" column="78" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
+        <state relative-caret-position="127">
+          <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cli-config.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/autoload/global.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/MateriaPrima/src/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/MateriaPrima/src/Model/InsumoModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Entity/Insumo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="90" column="35" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="35" />
           <folding>
-            <element signature="e#300#343#0#PHP" expanded="true" />
+            <element signature="e#108#140#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/MateriaPrima/src/Model/IModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/MateriaPrima/src/Model/MateriaPrima.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="58" column="43" lean-forward="true" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+          <folding>
+            <element signature="e#121#152#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

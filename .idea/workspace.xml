@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d77c379d-08e5-433c-b1ea-c9983c51610e" name="Default" comment="" />
+    <list default="true" id="d77c379d-08e5-433c-b1ea-c9983c51610e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/layout/layout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/layout/layout.phtml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +16,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="layout.phtml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/layout/layout.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="92" column="61" selection-start-line="92" selection-start-column="61" selection-end-line="92" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="InsumoModelo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/Insumo/src/Model/InsumoModelo.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -38,13 +49,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.phtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.phtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/Insumo/view/insumo/index/index.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <state relative-caret-position="200">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="realtec.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/realtec.sql">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="editar.phtml" pinned="false" current-in-tab="false">
@@ -112,8 +128,8 @@
       <find>&lt;form</find>
       <find>Insumos</find>
       <find>remover</find>
-      <find>Remo</find>
       <find>dataR</find>
+      <find>Remo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -157,12 +173,12 @@
         <option value="$PROJECT_DIR$/public/js/jquery.dataTables.min.js" />
         <option value="$PROJECT_DIR$/public/css/style.min.css" />
         <option value="$PROJECT_DIR$/module/Insumo/view/insumo/index/cadastro.phtml" />
-        <option value="$PROJECT_DIR$/layout/layout.phtml" />
         <option value="$PROJECT_DIR$/module/Insumo/view/insumo/index/editar.phtml" />
         <option value="$PROJECT_DIR$/module/Insumo/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/module/Insumo/src/Model/InsumoModelo.php" />
         <option value="$PROJECT_DIR$/module/Insumo/config/module.config.php" />
         <option value="$PROJECT_DIR$/module/Insumo/view/insumo/index/index.phtml" />
+        <option value="$PROJECT_DIR$/layout/layout.phtml" />
       </list>
     </option>
   </component>
@@ -258,6 +274,11 @@
               <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -274,11 +295,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp2\htdocs\realtec-fabricacao\data" />
       <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Insumo\view\insumo\index" />
       <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Insumo\src" />
       <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\MateriaPrima\src\Model" />
       <recent name="C:\xampp2\htdocs\realtec-fabricacao" />
-      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Entity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp2\htdocs\realtec-fabricacao\public\js" />
@@ -312,15 +333,16 @@
       <updated>1566328199688</updated>
       <workItem from="1566328201229" duration="4609000" />
       <workItem from="1566332947585" duration="1425000" />
-      <workItem from="1566407321954" duration="24013000" />
+      <workItem from="1566407321954" duration="24078000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30047000" />
+    <option name="totallyTimeSpent" value="30112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="33" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -623,13 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layout/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="73" column="74" selection-start-line="73" selection-start-column="74" selection-end-line="73" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/Insumo/src/Controller/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -679,8 +694,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module/Insumo/view/insumo/index/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        <state relative-caret-position="200">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/realtec.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/layout.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="92" column="61" selection-start-line="92" selection-start-column="61" selection-end-line="92" selection-end-column="61" />
         </state>
       </provider>
     </entry>

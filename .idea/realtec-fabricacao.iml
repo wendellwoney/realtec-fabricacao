@@ -2,7 +2,7 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/module/MateriaPrima/src" isTestSource="false" packagePrefix="MateriaPrima\" />
+      <sourceFolder url="file://$MODULE_DIR$/module/Insumo/src" isTestSource="false" packagePrefix="Insumo\" />
       <sourceFolder url="file://$MODULE_DIR$/module/Entity" isTestSource="false" packagePrefix="Entity\" />
       <sourceFolder url="file://$MODULE_DIR$/module/Inicial/src" isTestSource="false" packagePrefix="Inicial\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />

@@ -14,6 +14,12 @@
     <link href="<?= $this->basePath('js/plugins/@fortawesome/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet"/>
     <!-- CSS Files -->
     <link href="<?= $this->basePath('css/style.min.css?v=1.1.0'); ?>" rel="stylesheet"/>
+    <link href="<?= $this->basePath('css/jquery.dataTables.min.css'); ?>" rel="stylesheet"/>
+    <!--   Core   -->
+    <script src="<?= $this->basePath('js/plugins/jquery/dist/jquery.min.js'); ?>"></script>
+    <!--   DataTable JS   -->
+    <script src="<?= $this->basePath('js/jquery.dataTables.min.js'); ?>"></script>
+
 </head>
 
 <body class="">
@@ -64,7 +70,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link " href="">
-                        <i class="ni ni-palette text-red"></i> Matéria Prima
+                        <i class="ni ni-palette text-red"></i> Insumos
                     </a>
                 </li>
                 <li class="nav-item">
@@ -97,34 +103,22 @@
 </nav>
 <div class="main-content">
     <!-- Navbar -->
-    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
-        <div class="container-fluid">
-            <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.html">Inicial</a>
-        </div>
-    </nav>
+
     <!-- End Navbar -->
     <!-- Header -->
     <?= $this->content ?>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="row align-items-center justify-content-xl-between">
-            <div class="col-xl-6">
-                <div class="copyright text-center text-xl-left text-muted">
-                    &copy; <?= date('Y')?> Realtec</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <p></p>
 </div>
-</div>
-<!--   Core   -->
-<script src="<?= $this->basePath('js/plugins/jquery/dist/jquery.min.js'); ?>"></script>
 <script src="<?= $this->basePath('js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js'); ?>"></script>
 <!--   Optional JS   -->
 <script src="<?= $this->basePath('js/plugins/chart.js/dist/Chart.min.js'); ?>"></script>
 <script src="<?= $this->basePath('js/plugins/chart.js/dist/Chart.extension.js'); ?>"></script>
 <!--   Argon JS   -->
 <script src="<?= $this->basePath('js/argon-dashboard.min.js?v=1.1.0'); ?>"></script>
+<script>
+    $(document).ready( function () {
+        $('.dataTable').DataTable();
+    } );
+</script>
 </body>
-
 </html>

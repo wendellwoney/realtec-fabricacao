@@ -6,7 +6,7 @@
  * Time: 13:42
  */
 
-namespace MateriaPrima\Model;
+namespace Insumo\Model;
 
 interface IModel
 {

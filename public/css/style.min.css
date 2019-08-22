@@ -532,6 +532,7 @@ pre code {
     .container {
         max-width: 540px
     }
+
 }
 
 @media (min-width: 768px) {
@@ -762,6 +763,7 @@ pre code {
 }
 
 @media (min-width: 576px) {
+
     .col-sm {
         flex-basis: 0;
         flex-grow: 1;
@@ -6234,6 +6236,11 @@ a.bg-neutral:focus, a.bg-neutral:hover, button.bg-neutral:focus, button.bg-neutr
     display: inline-flex !important
 }
 
+.d-lg-inline-block {
+    display: inline-block !important;
+    margin-left: 20px;
+}
+
 @media (min-width: 576px) {
     .d-sm-none {
         display: none !important
@@ -6269,6 +6276,11 @@ a.bg-neutral:focus, a.bg-neutral:hover, button.bg-neutral:focus, button.bg-neutr
 
     .d-sm-inline-flex {
         display: inline-flex !important
+    }
+
+    .d-lg-inline-block {
+        display: inline-block !important
+        margin-left: 0px;
     }
 }
 
@@ -6308,6 +6320,10 @@ a.bg-neutral:focus, a.bg-neutral:hover, button.bg-neutral:focus, button.bg-neutr
     .d-md-inline-flex {
         display: inline-flex !important
     }
+    .d-lg-inline-block {
+        display: inline-block !important;
+        margin-left: 0px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -6321,6 +6337,7 @@ a.bg-neutral:focus, a.bg-neutral:hover, button.bg-neutral:focus, button.bg-neutr
 
     .d-lg-inline-block {
         display: inline-block !important
+        margin-left: 0px;
     }
 
     .d-lg-block {
@@ -8030,16 +8047,8 @@ a.bg-neutral:focus, a.bg-neutral:hover, button.bg-neutral:focus, button.bg-neutr
     padding: 4.5rem !important
 }
 
-.pt-6, .py-6 {
-    padding-top: 4.5rem !important
-}
-
 .pr-6, .px-6 {
     padding-right: 4.5rem !important
-}
-
-.pb-6, .py-6 {
-    padding-bottom: 4.5rem !important
 }
 
 .pl-6, .px-6 {
@@ -8909,6 +8918,10 @@ a.bg-neutral:focus, a.bg-neutral:hover, button.bg-neutral:focus, button.bg-neutr
 }
 
 @media (min-width: 768px) {
+    .pb-6, .py-6 {
+        padding-bottom: 4.5rem !important
+    }
+
     .m-md-0 {
         margin: 0 !important
     }
@@ -9691,6 +9704,10 @@ a.bg-neutral:focus, a.bg-neutral:hover, button.bg-neutral:focus, button.bg-neutr
 }
 
 @media (min-width: 992px) {
+    .pb-6, .py-6 {
+        padding-bottom: 4.5rem !important
+    }
+
     .m-lg-0 {
         margin: 0 !important
     }
@@ -10473,6 +10490,10 @@ a.bg-neutral:focus, a.bg-neutral:hover, button.bg-neutral:focus, button.bg-neutr
 }
 
 @media (min-width: 1200px) {
+    .pb-6, .py-6 {
+        padding-bottom: 4.5rem !important
+    }
+
     .m-xl-0 {
         margin: 0 !important
     }

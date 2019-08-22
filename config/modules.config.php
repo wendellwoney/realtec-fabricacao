@@ -25,5 +25,5 @@ return [
     'DoctrineModule',
     'DoctrineORMModule',
     'Inicial',
-    'MateriaPrima',
+    'Insumo',
 ];

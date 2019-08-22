@@ -5,7 +5,7 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace MateriaPrima;
+namespace Insumo;
 
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
@@ -28,10 +28,10 @@ return [
             ]
         ],
         'routes' => [
-            'materiaPrimaIndex' => [
+            'insumoIndex' => [
                 'type' => Literal::class,
                 'options' => [
-                    'route'    => '/materia-prima',
+                    'route'    => '/insumo',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
                         'action'     => 'index',
@@ -52,8 +52,8 @@ return [
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => [
-            'layout/layoutmateria'           => __DIR__ . '/../../../layout/layout.phtml',
-            'materia-prima/index/index' => __DIR__ . '/../view/materia-prima/index/index.phtml',
+            'layout/insumo'           => __DIR__ . '/../../../layout/layout.phtml',
+            'insumo/index/index' => __DIR__ . '/../view/insumo/index/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
         ],

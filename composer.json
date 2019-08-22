@@ -29,7 +29,7 @@
         "psr-4": {
             "Entity\\": "module/Entity",
             "Inicial\\": "module/Inicial/src/",
-            "MateriaPrima\\": "module/MateriaPrima/src/"
+            "Insumo\\": "module/Insumo/src/"
         }
     },
     "extra": [],

@@ -6,7 +6,7 @@
  * Time: 15:42
  */
 
-namespace MateriaPrima\Model;
+namespace Insumo\Model;
 
 
 use Doctrine\ORM\EntityManager;

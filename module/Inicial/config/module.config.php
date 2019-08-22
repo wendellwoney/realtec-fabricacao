@@ -7,27 +7,28 @@
 
 namespace Inicial;
 
+use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
 use Inicial\Factory\IndexControllerFactory;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
-    'router' => [
-        'doctrine' => [
-            'driver' => [
-                __NAMESPACE__ . '_driver' => [
-                    'class' => AnnotationDriver::class,
-                    'cache' => 'array',
-                    'paths' => [__DIR__ . '/../../../Entity']
-                ],
-                'orm_default' => [
-                    'drivers' => [
-                        'Entity' => __NAMESPACE__ . '_driver'
-                    ]
+    'doctrine' => [
+        'driver' => [
+            __NAMESPACE__ . '_driver' => [
+                'class' => AnnotationDriver::class,
+                'cache' => 'array',
+                'paths' => [__DIR__ . '/../../../Entity']
+            ],
+            'orm_default' => [
+                'drivers' => [
+                    'Entity' => __NAMESPACE__ . '_driver'
                 ]
             ]
-        ],
+        ]
+    ],
+    'router' => [
         'routes' => [
             'InicialIndex' => [
                 'type' => Literal::class,

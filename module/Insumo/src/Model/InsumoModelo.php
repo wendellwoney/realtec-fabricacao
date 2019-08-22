@@ -8,11 +8,10 @@
 
 namespace Insumo\Model;
 
-
 use Doctrine\ORM\EntityManager;
 use Entity\Insumo;
 
-class MateriaPrima implements IModel
+class InsumoModelo implements IModel
 {
 
     private $entityManager;
@@ -46,7 +45,7 @@ class MateriaPrima implements IModel
             $this->entityManager->refresh($insumo);
             return 'Insumo cadastrado com sucesso';
         } catch (\Exception $e) {
-            return 'Erro no Cadastro do insumo, por favor tente novamente mais tarde!';
+            throw new \Exception('Erro no Cadastro do insumo, por favor tente novamente mais tarde!');
         }
     }
 
@@ -60,19 +59,25 @@ class MateriaPrima implements IModel
             $this->entityManager->refresh($insumo);
             return 'Insumo editado com sucesso';
         } catch (\Exception $e) {
-            return 'Erro ao editar o insumo, por favor tente novamente mais tarde!';
+            throw new \Exception('Erro ao editar o insumo, por favor tente novamente mais tarde!');
         }
     }
 
     public function delete($id)
     {
-        $insumo = $this->get($id);
-        $insumo->setAtivo(0);
-        $this->entityManager->beginTransaction();
-        $this->entityManager->merge($insumo);
-        $this->entityManager->flush();
-        $this->entityManager->commit();
-        $this->entityManager->refresh($insumo);
+        try{
+            $insumo = $this->get($id);
+            $insumo->setAtivo(0);
+            $insumo->setDataRemocao(new \DateTime('now'));
+            $this->entityManager->beginTransaction();
+            $this->entityManager->merge($insumo);
+            $this->entityManager->flush();
+            $this->entityManager->commit();
+            $this->entityManager->refresh($insumo);
+            return 'Insumo removido com sucesso';
+        }catch (\Exception $e){
+            throw new \Exception('Erro ao remover o insumo, por favor tente novamente mais tarde!');
+        }
     }
 
 }

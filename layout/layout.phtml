@@ -19,6 +19,8 @@
     <script src="<?= $this->basePath('js/plugins/jquery/dist/jquery.min.js'); ?>"></script>
     <!--   DataTable JS   -->
     <script src="<?= $this->basePath('js/jquery.dataTables.min.js'); ?>"></script>
+    <!-- Maskmoney -->
+    <script src="<?= $this->basePath('js/jquery.mask.min.js'); ?>"></script>
 
 </head>
 
@@ -69,7 +71,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link " href="">
+                    <a class="nav-link " href="<?= $this->url('insumoIndex')?>">
                         <i class="ni ni-palette text-red"></i> Insumos
                     </a>
                 </li>

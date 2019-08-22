@@ -11,6 +11,11 @@ namespace Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\EntityRepository;
 
+/**
+ *
+ * @ORM\Table(name="insumo", indexes={@ORM\Index(name="id", columns={"id"})})
+ * @ORM\Entity
+ */
 class Insumo implements IEntity
 {
     /**
@@ -56,7 +61,7 @@ class Insumo implements IEntity
     private $observacao;
 
     /**
-     * @ORM\Column(type="string(1)")
+     * @ORM\Column(type="string")
      */
     private $ativo;
 

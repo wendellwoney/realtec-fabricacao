@@ -1859,7 +1859,7 @@ select.form-control[multiple], select.form-control[size], textarea.form-control 
 }
 
 .form-group {
-    margin-bottom: 1.5rem
+    margin-bottom: .5rem
 }
 
 .form-text {

@@ -7,34 +7,56 @@
 
 namespace Insumo;
 
+use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
+use Insumo\Factory\IndexControllerFactory;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
-    'router' => [
-        'doctrine' => [
-            'driver' => [
-                __NAMESPACE__ . '_driver' => [
-                    'class' => AnnotationDriver::class,
-                    'cache' => 'array',
-                    'paths' => [__DIR__ . '/../../../Entity']
-                ],
-                'orm_default' => [
-                    'drivers' => [
-                        'Entity' => __NAMESPACE__ . '_driver'
-                    ]
+    'doctrine' => [
+        'driver' => [
+            __NAMESPACE__ . '_driver' => [
+                'class' => AnnotationDriver::class,
+                'cache' => 'array',
+                'paths' => [__DIR__ . '/../../../Entity']
+            ],
+            'orm_default' => [
+                'drivers' => [
+                    'Entity' => __NAMESPACE__ . '_driver'
                 ]
             ]
-        ],
+        ]
+    ],
+    'router' => [
         'routes' => [
             'insumoIndex' => [
-                'type' => Literal::class,
+                'type' => Segment::class,
                 'options' => [
-                    'route'    => '/insumo',
+                    'route'    => '/insumo[/][:id]',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
                         'action'     => 'index',
+                    ],
+                ],
+            ],
+            'insumoCadastro' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route'    => '/insumo/cadastro[/]',
+                    'defaults' => [
+                        'controller' => Controller\IndexController::class,
+                        'action'     => 'cadastro',
+                    ],
+                ],
+            ],
+            'insumoEditar' => [
+                'type' => Segment::class,
+                'options' => [
+                    'route'    => '/insumo/editar/:idinsumo[/]',
+                    'defaults' => [
+                        'controller' => Controller\IndexController::class,
+                        'action'     => 'editar',
                     ],
                 ],
             ],
@@ -42,7 +64,7 @@ return [
     ],
     'controllers' => [
         'factories' => [
-            Controller\IndexController::class => InvokableFactory::class,
+            Controller\IndexController::class => IndexControllerFactory::class,
         ],
     ],
     'view_manager' => [

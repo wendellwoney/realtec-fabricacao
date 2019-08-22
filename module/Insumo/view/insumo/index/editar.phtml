@@ -1,0 +1,94 @@
+<nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+    <div class="container-fluid">
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.html">Insumos</a>
+    </div>
+</nav>
+<div class="header bg-gradient-primary pb-5 pt-6 pt-md-0">
+</div>
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="row mt-5">
+                <div class="col-xl-12 mb-5 mb-xl-0">
+
+                    <?php if($this->msgs):?>
+                    <div class="alert alert-success" role="alert">
+                        <strong>Sucesso!</strong> <?= $this->msgs;?>
+                    </div>
+                    <?php endif;?>
+                    <?php if($this->msge):?>
+                    <div class="alert alert-danger" role="alert">
+                        <strong>Erro!</strong> <?= $this->msge;?>
+                    </div>
+                    <?php endif;?>
+
+                    <div class="card shadow">
+                        <div class="card-header border-0">
+                            <div class="row align-items-center">
+                                <div class="col col-md-12">
+                                    <h3 class="mb-0"><span class="fa fa-box"></span> Editar Insumos</h3>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col col-md-12">
+                                    <form action="" method="post">
+                                        <input type="hidden" name="id" value="<?= $this->insumo->getIdInsumo();?>">
+                                        <div class="p-2">
+                                            Código do insumo <span class="text-red">*</span>
+                                            <div class="form-group">
+                                                <input required maxlength="15" type="text" class="form-control"
+                                                       id="codigo" name="codigo" placeholder="Ex: 0001" value="<?= $this->insumo->getCodigo();?>">
+                                            </div>
+                                            Nome do insumo <span class="text-red">*</span>
+                                            <div class="form-group">
+                                                <input required maxlength="100" type="text" class="form-control"
+                                                       name="nome" id="nome" placeholder="Ex: Cloro" value="<?= $this->insumo->getNome();?>">
+                                            </div>
+                                            <span data-toggle="tooltip" data-placement="top" title="A unidade de medida reflete diretamente na composição do produto.">Unidade de medida</span> <span class="text-red">*</span> <span class="ni ni-tag text-red" data-toggle="tooltip" data-placement="top" title="A unidade de medida reflete diretamente na composição do produto."></span>
+                                            <div class="form-group">
+                                                <select name="unidade_medida" id="unidade_medida" class="form-control" required>
+                                                    <option></option>
+                                                    <optgroup label="Pesos">
+                                                        <option value="T" <?php if($this->insumo->getUnidadeMedida() == 'T'):?> selected <?php endif;?>>TONELADA</option>
+                                                        <option value="KG" <?php if($this->insumo->getUnidadeMedida() == 'KG'):?> selected <?php endif;?>>QUILOGRAMA</option>
+                                                        <option value="G" <?php if($this->insumo->getUnidadeMedida() == 'G'):?> selected <?php endif;?>>GRAMA</option>
+                                                        <option value="MG" <?php if($this->insumo->getUnidadeMedida() == 'MG'):?> selected <?php endif;?>>MILIGRAMA</option>
+                                                    </optgroup>
+                                                    <optgroup label="Líquidos">
+                                                        <option value="L" <?php if($this->insumo->getUnidadeMedida() == 'L'):?> selected <?php endif;?>>LITRO</option>
+                                                        <option value="ML" <?php if($this->insumo->getUnidadeMedida() == 'ML'):?> selected <?php endif;?>>MILILITRO</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                            Estoque mínimo <span class="text-red">*</span>
+                                            <div class="form-group">
+                                                <input required type="text" class="form-control decimal"
+                                                       id="estoque" name="estoque" placeholder="Ex: 10.5" value="<?= $this->insumo->getAlertaValorMinimo();?>">
+                                            </div>
+                                            Observações
+                                            <div class="form-group">
+                                                <textarea name="observacao" id="observacao" class="form-control" rows="3"
+                                                          placeholder="Observações do insumo"><?= $this->insumo->getObservacao()?></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-success"><span
+                                                            class="fa fa-save"></span> Editar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.decimal').mask('000000000000000.00', {reverse: true});
+    });
+</script>

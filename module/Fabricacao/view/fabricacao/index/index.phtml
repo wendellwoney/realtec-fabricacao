@@ -1,6 +1,7 @@
 <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
     <div class="container-fluid">
-        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="<?= $this->url('ProdutoLista')?>">Produtos</a>
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
+           href="<?= $this->url('FabricacaoLista') ?>">Fabricação</a>
     </div>
 </nav>
 <div class="header bg-gradient-primary pb-5 pt-6 pt-md-0">
@@ -11,22 +12,22 @@
             <div class="row mt-5">
                 <div class="col-xl-12 mb-5 mb-xl-0">
 
-                    <?php if($this->msgs):?>
+                    <?php if ($this->msgs): ?>
                         <div class="alert alert-success" role="alert">
-                            <strong>Sucesso!</strong> <?= $this->msgs;?>
+                            <strong>Sucesso!</strong> <?= $this->msgs; ?>
                         </div>
-                    <?php endif;?>
-                    <?php if($this->msge):?>
+                    <?php endif; ?>
+                    <?php if ($this->msge): ?>
                         <div class="alert alert-danger" role="alert">
-                            <strong>Erro!</strong> <?= $this->msge;?>
+                            <strong>Erro!</strong> <?= $this->msge; ?>
                         </div>
-                    <?php endif;?>
+                    <?php endif; ?>
 
                     <div class="card shadow">
                         <div class="card-header border-0">
                             <div class="row align-items-center">
                                 <div class="col col-md-6">
-                                    <a href="<?= $this->url('ProdutoCadastro')?>">
+                                    <a href="<?= $this->url('ProdutoCadastro') ?>">
                                         <button class="btn btn-success"><span class="fa fa-plus"></span> Cadastrar
                                         </button>
                                     </a>
@@ -43,13 +44,16 @@
                                 <tr>
                                     <th></th>
                                     <th class="text-center">Código</th>
-                                    <th>Nome</th>
+                                    <th class="text-center">Data Fab</th>
+                                    <th>Produto</th>
                                     <th class="text-center">Uni./Medida</th>
-                                    <th class="text-center">Valor Fab. Atual/UNID</th>
+                                    <th class="text-center">Quantidade</th>
+                                    <th class="text-center">Valor Fab./UNID</th>
+                                    <th class="text-center">Valor Fabricação</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach ($this->produtos as $produto): ?>
+                                <?php foreach ($this->fabricacao as $fabri): ?>
                                     <tr>
                                         <td>
                                             <div class="dropdown">
@@ -60,18 +64,23 @@
                                                 </button>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                     <a class="dropdown-item"
-                                                       href="<?= $this->url('ProdutoEditar', ['idProduto' => $produto->getIdProduto()])?>"><span
+                                                       href=""><span
                                                                 class="fa fa-edit"></span> Editar</a>
-                                                    <a class="dropdown-item" href="#" onclick="remover('<?= $produto->getNome() ?>', <?= $produto->getIdProduto() ?>)"><span
+                                                    <a class="dropdown-item" href="#"><span
                                                                 class="fa fa-window-close"></span> Remover</a>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="text-center"><strong><?= $produto->getCodigo() ?></strong></td>
-                                        <td><?= $produto->getNome() ?></td>
-                                        <td class="text-center"><?= $produto->getUnidadeMedida() ?></td>
+                                        <td class="text-center"><strong><?= $fabri->getCodigo() ?></strong></td>
+                                        <td><?= $fabri->getDataCadastro()->format('d/m/Y') ?></td>
+                                        <td class="text-center"><?= $fabri->getProduto()->getNome() ?></td>
+                                        <td class="text-center"><?= $fabri->getProduto()->getUnidadeMedida() ?></td>
+                                        <td class="text-center"><strong><?= $fabri->getQuantidade() ?></strong></td>
                                         <td class="text-center">
-                                            <?= 'R$ ' . number_format($this->valorFabricacao[$produto->getIdProduto()], 2, '.', '') ?>
+                                            <?= 'R$ ' . number_format(($this->valorFabricacao[$fabri->getIdFabricacao()] / $fabri->getQuantidade()), 2, '.', '') ?>
+                                        </td>
+                                        <td class="text-center">
+                                            <?= 'R$ ' . number_format($this->valorFabricacao[$fabri->getIdFabricacao()], 2, '.', '') ?>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

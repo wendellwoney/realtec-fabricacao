@@ -8,6 +8,9 @@
 
 namespace Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\EntityRepository;
+
 /**
  *
  * @ORM\Table(name="fabricacao", indexes={@ORM\Index(name="id", columns={"id"})})

@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d77c379d-08e5-433c-b1ea-c9983c51610e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/module/Entity/FabricacaoFormula.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Fabricacao/src/Model/ProdutoFormulaModelo.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Fabricacao/src/Model/FabricacaoFormulaModelo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Fabricacao/src/Model/ProdutoModelo.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Fabricacao/src/Model/FabricacaoModelo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/layout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/layout/layout.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Entity/Fabricacao.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Entity/Fabricacao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Entity/FabricacaoFormula.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Entity/FabricacaoFormula.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Fabricacao/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Fabricacao/config/module.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Fabricacao/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Fabricacao/src/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Fabricacao/view/produto/index/cadastro.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/cadastro.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Fabricacao/view/produto/index/editar.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/editar.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Fabricacao/view/produto/index/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/index.phtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +24,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FabricacaoModelo.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/index.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1343">
+              <caret line="79" column="71" selection-start-line="79" selection-start-column="71" selection-end-line="79" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Fabricacao.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/module/Entity/Fabricacao.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#107#139#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntradaInsumo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Entity/EntradaInsumo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="34" />
+              <folding>
+                <element signature="e#108#140#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Fabricacao/src/Controller/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="43" column="86" lean-forward="true" selection-start-line="43" selection-start-column="86" selection-end-line="43" selection-end-column="86" />
+              <folding>
+                <element signature="e#314#345#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FabricacaoModelo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/Fabricacao/src/Model/FabricacaoModelo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1308">
-              <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+            <state relative-caret-position="374">
+              <caret line="27" column="57" lean-forward="true" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
               <folding>
                 <element signature="e#118#149#0#PHP" expanded="true" />
               </folding>
@@ -31,13 +81,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FabricacaoFormulaModelo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/Fabricacao/src/Model/FabricacaoFormulaModelo.php">
+      <file leaf-file-name="module.config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Fabricacao/config/module.config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1411">
-              <caret line="88" column="9" lean-forward="true" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
+            <state relative-caret-position="305">
+              <caret line="30" column="28" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="28" />
               <folding>
-                <element signature="e#118#149#0#PHP" expanded="true" />
+                <element signature="e#303#352#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,7 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Unidade de medida</find>
       <find>cadas</find>
       <find>form</find>
       <find>&lt;form</find>
@@ -77,6 +126,7 @@
       <find>Fabr</find>
       <find>Código do produto</find>
       <find>Nome do insumo</find>
+      <find>Fabri</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -85,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/module/Insumo/src/Factory/IndexControllerFactory.php" />
         <option value="$PROJECT_DIR$/module/Insumo/src/Model/Insumos.php" />
         <option value="$PROJECT_DIR$/module/Insumo/src/Model/Insumo.php" />
         <option value="$PROJECT_DIR$/config/autoload/global.php" />
@@ -111,7 +160,6 @@
         <option value="$PROJECT_DIR$/module/Produto/src/Model/IModel.php" />
         <option value="$PROJECT_DIR$/module/Entity/Produto.php" />
         <option value="$PROJECT_DIR$/module/Entity/ProdutoFormula.php" />
-        <option value="$PROJECT_DIR$/layout/layout.phtml" />
         <option value="$PROJECT_DIR$/public/js/formula.js" />
         <option value="$PROJECT_DIR$/module/Insumo/src/Model/InsumoModelo.php" />
         <option value="$PROJECT_DIR$/module/Produto/src/Factory/IndexControllerFactory.php" />
@@ -125,17 +173,19 @@
         <option value="$PROJECT_DIR$/module/Produto/view/produto/index/index.phtml" />
         <option value="$PROJECT_DIR$/config/modules.config.php" />
         <option value="$PROJECT_DIR$/module/Fabricacao/src/Model/IModel.php" />
-        <option value="$PROJECT_DIR$/module/Fabricacao/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/module/Fabricacao/src/Model/ProdutoFormulaModelo.php" />
         <option value="$PROJECT_DIR$/module/Fabricacao/src/Model/ProdutoModelo.php" />
         <option value="$PROJECT_DIR$/module/Fabricacao/src/Module.php" />
         <option value="$PROJECT_DIR$/module/Fabricacao/src/Factory/IndexControllerFactory.php" />
-        <option value="$PROJECT_DIR$/module/Fabricacao/config/module.config.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/module/Entity/Fabricacao.php" />
-        <option value="$PROJECT_DIR$/module/Entity/FabricacaoFormula.php" />
         <option value="$PROJECT_DIR$/module/Fabricacao/src/Model/FabricacaoFormulaModelo.php" />
         <option value="$PROJECT_DIR$/module/Fabricacao/src/Model/FabricacaoModelo.php" />
+        <option value="$PROJECT_DIR$/module/Fabricacao/config/module.config.php" />
+        <option value="$PROJECT_DIR$/layout/layout.phtml" />
+        <option value="$PROJECT_DIR$/module/Fabricacao/src/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/index.phtml" />
+        <option value="$PROJECT_DIR$/module/Entity/FabricacaoFormula.php" />
+        <option value="$PROJECT_DIR$/module/Entity/Fabricacao.php" />
       </list>
     </option>
   </component>
@@ -229,28 +279,24 @@
             <path>
               <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
               <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
               <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
               <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
               <item name="Fabricacao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Fabricacao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -308,12 +354,12 @@
       <workItem from="1566332947585" duration="1425000" />
       <workItem from="1566407321954" duration="24711000" />
       <workItem from="1566580283554" duration="1909000" />
-      <workItem from="1566820296837" duration="27680000" />
+      <workItem from="1566820296837" duration="28384000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60334000" />
+    <option name="totallyTimeSpent" value="61038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="39" width="1552" height="840" extended-state="0" />
@@ -364,16 +410,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/module/Insumo/src/Factory/IndexControllerFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding>
-            <element signature="e#116#147#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/Inicial/src/Controller/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -467,13 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Entity/EntradaInsumo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
-          <caret line="67" column="65" lean-forward="true" selection-start-line="67" selection-start-column="65" selection-end-line="67" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/Produto/src/Module.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -502,13 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
           <caret line="152" column="9" selection-start-line="152" selection-start-column="9" selection-end-line="152" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -686,34 +708,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Fabricacao/src/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Fabricacao/config/module.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="83" column="2" lean-forward="true" selection-start-line="83" selection-start-column="2" selection-end-line="83" selection-end-column="2" />
-          <folding>
-            <element signature="e#303#352#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Entity/Fabricacao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="59" column="41" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -734,29 +732,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Entity/FabricacaoFormula.php">
+    <entry file="file://$PROJECT_DIR$/layout/layout.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1053">
-          <caret line="144" column="41" selection-start-line="144" selection-start-column="41" selection-end-line="144" selection-end-column="41" />
+        <state relative-caret-position="200">
+          <caret line="78" column="80" selection-start-line="78" selection-start-column="80" selection-end-line="78" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module/Fabricacao/src/Model/FabricacaoFormulaModelo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="88" column="9" lean-forward="true" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
+        <state relative-caret-position="391">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
           <folding>
             <element signature="e#118#149#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/module/Entity/FabricacaoFormula.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="e#108#140#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="79" column="71" selection-start-line="79" selection-start-column="71" selection-end-line="79" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Fabricacao/config/module.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <element signature="e#303#352#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/module/Fabricacao/src/Model/FabricacaoModelo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1308">
-          <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+        <state relative-caret-position="374">
+          <caret line="27" column="57" lean-forward="true" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
           <folding>
             <element signature="e#118#149#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Fabricacao/src/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="43" column="86" lean-forward="true" selection-start-line="43" selection-start-column="86" selection-end-line="43" selection-end-column="86" />
+          <folding>
+            <element signature="e#314#345#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Entity/EntradaInsumo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="e#108#140#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Entity/Fabricacao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#107#139#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -13,7 +13,7 @@ use Doctrine\ORM\EntityRepository;
 
 /**
  *
- * @ORM\Table(name="produto_formula", indexes={@ORM\Index(name="id", columns={"id"})})
+ * @ORM\Table(name="fabricacao_formula", indexes={@ORM\Index(name="id", columns={"id"})})
  * @ORM\Entity
  */
 class FabricacaoFormula implements IEntity

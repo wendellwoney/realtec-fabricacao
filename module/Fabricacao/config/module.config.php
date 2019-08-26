@@ -28,36 +28,16 @@ return [
     ],
     'router' => [
         'routes' => [
-            'ProdutoLista' => [
+            'FabricacaoLista' => [
                 'type' => Segment::class,
                 'options' => [
-                    'route' => '/produto[/][:id]',
+                    'route' => '/fabricacao[/][:id]',
                     'defaults' => array(
                         'controller' => Controller\IndexController::class,
                         'action' => 'index',
                     ),
                 ],
             ],
-            'ProdutoCadastro' => [
-                'type' => Segment::class,
-                'options' => [
-                    'route' => '/produto/cadastro[/]',
-                    'defaults' => [
-                        'controller' => Controller\IndexController::class,
-                        'action' => 'cadastro',
-                    ],
-                ],
-            ],
-            'ProdutoEditar' => [
-                'type' => Segment::class,
-                'options' => [
-                    'route' => '/produto/editar/:idProduto[/]',
-                    'defaults' => [
-                        'controller' => Controller\IndexController::class,
-                        'action' => 'editar',
-                    ],
-                ],
-            ]
         ],
     ],
     'controllers' => [

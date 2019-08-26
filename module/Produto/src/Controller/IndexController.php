@@ -40,6 +40,7 @@ class IndexController extends AbstractActionController
         }
 
         $produtos = $produtoModelo->getList();
+
         $view->setVariable('produtos', $produtos);
 
         $valorProdutos = [];
@@ -47,8 +48,6 @@ class IndexController extends AbstractActionController
         foreach ($produtos as $produto) {
             $valorProdutos[$produto->getIdProduto()] = $produtoModelo->calculaValordoProduto($produto->getIdProduto());
         }
-
-
         $view->setVariable('valorFabricacao', $valorProdutos);
         return $view;
     }

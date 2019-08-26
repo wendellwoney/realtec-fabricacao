@@ -53,7 +53,7 @@ return [
         'exception_template' => 'error/index',
         'template_map' => [
             'layout/fabricacao' => __DIR__ . '/../../../layout/layout.phtml',
-            'produto/index/index' => __DIR__ . '/../view/fabricacao/index/index.phtml',
+            'fabricacao/index/index' => __DIR__ . '/../view/fabricacao/index/index.phtml',
             'error/404' => __DIR__ . '/../view/error/404.phtml',
             'error/index' => __DIR__ . '/../view/error/index.phtml',
         ],

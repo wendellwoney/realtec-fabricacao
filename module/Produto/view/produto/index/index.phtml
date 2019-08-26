@@ -44,7 +44,7 @@
                                     <th></th>
                                     <th class="text-center">Código</th>
                                     <th>Nome</th>
-                                    <th>Uni./Medida</th>
+                                    <th class="text-center">Uni./Medida</th>
                                     <th class="text-center">Valor Fabricação</th>
                                 </tr>
                                 </thead>
@@ -60,18 +60,18 @@
                                                 </button>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                     <a class="dropdown-item"
-                                                       href="<?= $this->url('insumoEditar', ['idinsumo' => $produto->getIdInsumo()]) ?>"><span
+                                                       href=""><span
                                                                 class="fa fa-edit"></span> Editar</a>
-                                                    <a class="dropdown-item" href="#" onclick="remover('<?= $produto->getNome() ?>', <?= $produto->getIdInsumo() ?>)"><span
+                                                    <a class="dropdown-item" href="#"><span
                                                                 class="fa fa-window-close"></span> Remover</a>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="text-center"><strong><?= $produto->getCodigo() ?></strong></td>
                                         <td><?= $produto->getNome() ?></td>
-                                        <td><?= $produto->getUnidadeMedida() ?></td>
+                                        <td class="text-center"><?= $produto->getUnidadeMedida() ?></td>
                                         <td class="text-center">
-
+                                            <?= 'R$ ' . number_format($this->valorFabricacao[$produto->getIdProduto()], 2, '.', '') ?>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

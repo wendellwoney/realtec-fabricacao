@@ -74,7 +74,7 @@
                                         <td class="text-center"><?= $insumo->getAlertaValorMinimo() ?></td>
                                         <td class="text-center"><?= $insumo->getUnidadeMedida() ?></td>
                                         <td class="text-center"><?= ($insumo->getEstoqueGeral()) ? $insumo->getEstoqueGeral() : '<strong>(Sem entrada)</strong>' ?></td>
-                                        <td class="text-center"><?= ($insumo->getValorMedio()) ? $insumo->getValorMedio() : '<strong>(Sem entrada)</strong>' ?></td>
+                                        <td class="text-center"><?= ($insumo->getValorMedio()) ? 'R$ ' . number_format($insumo->getValorMedio(), 2, '.', '') : '<strong>(Sem entrada)</strong>' ?></td>
                                     </tr>
                                 <?php endforeach; ?>
                                 </tbody>

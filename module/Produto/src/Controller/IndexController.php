@@ -28,9 +28,18 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
         $view = new ViewModel();
-
         $produtoModelo = new ProdutoModelo($this->entityManager);
-        $view->setVariable('produtos', $produtoModelo->getList());
+        $produtos = $produtoModelo->getList();
+        $view->setVariable('produtos', $produtos);
+
+        $valorProdutos = [];
+
+        foreach ($produtos as $produto) {
+            $valorProdutos[$produto->getIdProduto()] = $produtoModelo->calculaValordoProduto($produto->getIdProduto());
+        }
+
+
+        $view->setVariable('valorFabricacao', $valorProdutos);
         return $view;
     }
 
@@ -81,4 +90,6 @@ class IndexController extends AbstractActionController
         $view->setVariable('insumos', $insumoModelo->getList());
         return $view;
     }
+
+
 }

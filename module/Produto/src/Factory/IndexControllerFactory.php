@@ -9,8 +9,11 @@
 namespace Produto\Factory;
 
 use Doctrine\ORM\EntityManager;
+use Insumo\Model\InsumoModelo;
 use Interop\Container\ContainerInterface;
 use Produto\Controller\IndexController;
+use Produto\Model\ProdutoFormulaModelo;
+use Produto\Model\ProdutoModelo;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 class IndexControllerFactory

@@ -10,6 +10,7 @@ namespace Produto\Model;
 
 use Doctrine\ORM\EntityManager;
 use Entity\Produto;
+use Insumo\Model\InsumoModelo;
 
 class ProdutoModelo implements IModel
 {
@@ -78,6 +79,17 @@ class ProdutoModelo implements IModel
         } catch (\Exception $e) {
             throw new \Exception('Erro ao remover o produto, por favor tente novamente mais tarde!');
         }
+    }
+
+    public function calculaValordoProduto($idProduto){
+        $formulaProduto = new ProdutoFormulaModelo($this->entityManager);
+        $compostos = $formulaProduto->getProdutoFormula($idProduto);
+        $valorTotal = 0;
+        foreach ($compostos as $composto) {
+            $valorTotal += ($composto->getQtde() * $composto->getInsumo()->getValorMedio());
+        }
+
+        return $valorTotal;
     }
 
 }

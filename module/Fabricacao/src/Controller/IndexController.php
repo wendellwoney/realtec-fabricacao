@@ -8,6 +8,9 @@
 namespace Fabricacao\Controller;
 
 use Doctrine\ORM\EntityManager;
+use Entity\Fabricacao;
+use Entity\FabricacaoFormula;
+use Fabricacao\Model\FabricacaoFormulaModelo;
 use Fabricacao\Model\FabricacaoModelo;
 use Insumo\Model\InsumoModelo;
 use Produto\Model\ProdutoFormulaModelo;
@@ -44,7 +47,7 @@ class IndexController extends AbstractActionController
         $valorProdutos = [];
 
         foreach ($fabricacao as $fab) {
-            $valorProdutos[$fab->getIdFabricacao()] = $fabricacaoModelo->calculaValordaFabricacao($fab->getIdFabricacao());
+            $valorProdutos[$fab->getIdFabricacao()] = $fabricacaoModelo->calculaValordaFabricacao($fab->getIdFabricacao()) * $fab->getQuantidade();
         }
 
         $view->setVariable('valorFabricacao', $valorProdutos);
@@ -54,8 +57,54 @@ class IndexController extends AbstractActionController
     public function cadastroAction()
     {
         $view = new ViewModel();
-
         $produtoModelo = new ProdutoModelo($this->entityManager);
+        $fabricacaoModelo = new FabricacaoModelo($this->entityManager);
+        $fabricacaoFormulaModelo = new FabricacaoFormulaModelo($this->entityManager);
+        $produtoFormulaModelo = new ProdutoFormulaModelo($this->entityManager);
+        $insumoModelo = new InsumoModelo($this->entityManager);
+
+        if ($this->getRequest()->isPost()) {
+
+            //print_r($_POST);exit;
+
+            $fabricacao = new Fabricacao();
+            $fabricacao->setIdFabricacao(0);
+            $fabricacao->setProduto($produtoModelo->get($this->params()->fromPost('produto')));
+            $fabricacao->setAtivo('1');
+            $fabricacao->setObservacao($this->params()->fromPost('obsercacao'));
+            $fabricacao->setCodigo($this->params()->fromPost('codigo'));
+            $fabricacao->setQuantidade($this->params()->fromPost('quantidade'));
+            $fabricacao->setDataCadastro(new \DateTime('now'));
+
+            try{
+                $fabricacaoModelo->create($fabricacao);
+                //Clonar Insumos Fabricacao do principal para a fabricação
+                $formulaProduto = $produtoFormulaModelo->getProdutoFormula($this->params()->fromPost('produto'));
+
+                foreach ($formulaProduto as $formulaP) {
+                    $fabricacaoFormula = new FabricacaoFormula();
+                    $fabricacaoFormula->setIdFabricacaoFormula(0);
+                    $fabricacaoFormula->setQtde($formulaP->getQtde());
+                    $fabricacaoFormula->setProduto($produtoModelo->get($this->params()->fromPost('produto')));
+                    $fabricacaoFormula->setInsumo($formulaP->getInsumo());
+                    $fabricacaoFormula->setFabricacao($fabricacaoModelo->get($fabricacao->getIdFabricacao()));
+                    $fabricacaoFormula->setValor($formulaP->getInsumo()->getValorMedio());
+                    $fabricacaoFormulaModelo->create($fabricacaoFormula);
+
+                    //Dar baixa no estoque
+                    $calRemocao = $this->params()->fromPost('quantidade') * $formulaP->getQtde();
+                    $insumo = $insumoModelo->get($formulaP->getInsumo()->getidInsumo());
+                    $insumo->setEstoqueGeral(($insumo->getEstoqueGeral() - $calRemocao));
+                    $insumoModelo->update($insumo);
+                }
+
+                $view->setVariable('msgs', 'Produto fabricado!');
+            }catch (\Exception $e){
+                $view->setVariable('msge', $e->getMessage());
+            }
+        }
+
+
         $view->setVariable('produtos', $produtoModelo->getList());
         return $view;
     }

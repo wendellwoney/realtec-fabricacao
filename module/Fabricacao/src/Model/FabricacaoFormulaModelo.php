@@ -10,6 +10,7 @@ namespace Fabricacao\Model;
 
 use Doctrine\ORM\EntityManager;
 use Entity\FabricacaoFormula;
+use Produto\Model\ProdutoModelo;
 
 class FabricacaoFormulaModelo implements IModel
 {
@@ -26,13 +27,13 @@ class FabricacaoFormulaModelo implements IModel
         return $this->entityManager->getRepository(FabricacaoFormula::class)->findAll();
     }
 
-    public function getProdutoFormula($idProduto)
+    public function getFabricacaoFormula($idFabricacao)
     {
-        $produtoModelo = new ProdutoModelo($this->entityManager);
-        $produto = $produtoModelo->get($idProduto);
+        $fabricacaoModelo = new FabricacaoModelo($this->entityManager);
+        $fabricacao = $fabricacaoModelo->get($idFabricacao);
         return $this->entityManager->getRepository(FabricacaoFormula::class)->findBy(
             [
-                'produto' => $produto
+                'fabricacao' => $fabricacao
             ]
         );
     }
@@ -80,12 +81,12 @@ class FabricacaoFormulaModelo implements IModel
         return $this->entityManager->getRepository(FabricacaoFormula::class)->find($id);
     }
 
-    public function removeFormulaProduto($idProduto)
+    public function removeFormulaFabricacao($idFabricao)
     {
-        $produtoFormula = $this->getProdutoFormula($idProduto);
+        $fabricacaoFormula = $this->getFabricacaoFormula($idFabricao);
 
-        foreach ($produtoFormula as $produto){
-            $this->entityManager->remove($produto);
+        foreach ($fabricacaoFormula as $fabricacao){
+            $this->entityManager->remove($fabricacao);
         }
     }
 

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
     <div class="container-fluid">
-        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="<?= $this->url('ProdutoLista') ?>">Produto</a>
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="<?= $this->url('ProdutoLista') ?>">Fabricação</a>
     </div>
 </nav>
 <div class="header bg-gradient-primary pb-5 pt-6 pt-md-0">
@@ -26,13 +26,18 @@
                         <div class="card-header border-0">
                             <div class="row align-items-center">
                                 <div class="col col-md-12">
-                                    <h3 class="mb-0"><span class="fa fa-box"></span> Cadastro de Produto</h3>
+                                    <h3 class="mb-0"><span class="fa fa-box"></span> Cadastro Fabricação de Produto</h3>
                                 </div>
                             </div>
                             <div class="row align-items-center">
                                 <div class="col col-md-12">
                                     <form action="" method="post">
                                         <div class="p-2">
+                                            Código da Fabricação <span class="text-red">*</span>
+                                            <div class="form-group">
+                                                <input required type="text" class="form-control"
+                                                       id="codigo" name="codigo" placeholder="Ex: 0001">
+                                            </div>
                                             Produto a ser fabricado <span class="text-red">*</span>
                                             <div class="form-group">
                                                 <select name="produto" id="produto" class="form-control"
@@ -48,10 +53,10 @@
                                                 <input required type="text" class="form-control decimal"
                                                        id="quantidade" name="quantidade" placeholder="Ex: 10.5" onkeyup="carregaInfoFabricacao()">
                                             </div>
-                                            Descrição
+                                            Observação
                                             <div class="form-group">
-                                                <textarea name="descricao" id="descricao" class="form-control" rows="3"
-                                                          placeholder="Descrição do Produto"></textarea>
+                                                <textarea name="observacao" id="observacao" class="form-control" rows="3"
+                                                          placeholder="Observações para a fabricação"></textarea>
                                             </div>
                                             <div id="infofabricacao"></div>
                                             <p> </p>

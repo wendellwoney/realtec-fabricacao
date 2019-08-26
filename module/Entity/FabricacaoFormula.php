@@ -23,7 +23,7 @@ class FabricacaoFormula implements IEntity
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $idProdutoFormula;
+    private $idFabricacaoFormula;
 
     /**
      * @ORM\Column(name="quantidade",type="decimal")
@@ -46,7 +46,7 @@ class FabricacaoFormula implements IEntity
     private $insumo;
 
     /**
-     * @var \Entity\Insumo
+     * @var \Entity\Produto
      *
      * @ORM\ManyToOne(targetEntity="Entity\Produto")
      * @ORM\JoinColumns({
@@ -56,19 +56,29 @@ class FabricacaoFormula implements IEntity
     private $produto;
 
     /**
+     * @var \Entity\Fabricacao
+     *
+     * @ORM\ManyToOne(targetEntity="Entity\Fabricacao")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="fabricacao_id", referencedColumnName="id")
+     * })
+     */
+    private $fabricacao;
+
+    /**
      * @return mixed
      */
-    public function getIdProdutoFormula()
+    public function getIdFabricacaoFormula()
     {
-        return $this->idProdutoFormula;
+        return $this->idFabricacaoFormula;
     }
 
     /**
-     * @param mixed $idProdutoFormula
+     * @param mixed $idFabricacaoFormula
      */
-    public function setIdProdutoFormula($idProdutoFormula)
+    public function setIdFabricacaoFormula($idFabricacaoFormula)
     {
-        $this->idProdutoFormula = $idProdutoFormula;
+        $this->idFabricacaoFormula = $idFabricacaoFormula;
     }
 
     /**
@@ -135,15 +145,32 @@ class FabricacaoFormula implements IEntity
         $this->valor = $valor;
     }
 
+    /**
+     * @return Fabricacao
+     */
+    public function getFabricacao()
+    {
+        return $this->fabricacao;
+    }
+
+    /**
+     * @param Fabricacao $fabricacao
+     */
+    public function setFabricacao($fabricacao)
+    {
+        $this->fabricacao = $fabricacao;
+    }
+
 
     public function toArray()
     {
         return [
-            'idProdutoFormula' => $this->getIdProdutoFormula(),
+            'idProdutoFormula' => $this->getIdFabricacaoFormula(),
             'insumo' => $this->getInsumo()->toArray(),
             'quantidade' => $this->getQtde(),
             'valor' => $this->getValor(),
-            'produto' => $this->getProduto()->toArray()
+            'produto' => $this->getProduto()->toArray(),
+            'fabricacao' => $this->getFabricacao()->toArray()
         ];
     }
 

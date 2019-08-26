@@ -38,6 +38,26 @@ return [
                     ),
                 ],
             ],
+            'FabricacaoCadastro' => [
+                'type' => Segment::class,
+                'options' => [
+                    'route' => '/fabricacao/cadastro[/]',
+                    'defaults' => array(
+                        'controller' => Controller\IndexController::class,
+                        'action' => 'cadastro',
+                    ),
+                ],
+            ],
+            'FabricacaoInfoFabricacao' => [
+                'type' => Segment::class,
+                'options' => [
+                    'route' => '/fabricacao/info/:idProduto/:qtde[/]',
+                    'defaults' => array(
+                        'controller' => Controller\IndexController::class,
+                        'action' => 'infofabricacao',
+                    ),
+                ],
+            ],
         ],
     ],
     'controllers' => [

@@ -10,7 +10,6 @@ namespace Fabricacao\Factory;
 
 use Doctrine\ORM\EntityManager;
 use Fabricacao\Controller\IndexController;
-use Insumo\Model\InsumoModelo;
 use Interop\Container\ContainerInterface;
 
 class IndexControllerFactory

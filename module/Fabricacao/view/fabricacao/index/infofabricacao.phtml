@@ -1,0 +1,52 @@
+<div class="card shadow">
+    <div class="card-header border-0">
+        <div class="row align-items-center">
+            <div class="col col-md-6">
+                <h3 class="mb-0">Informação para fabricação do Produto</h3>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <!-- Projects table -->
+        <table id="example" class="dataTable table align-items-cente">
+            <thead>
+            <tr>
+                <th class="text-center">Situação</th>
+                <th class="text-center">Código</th>
+                <th class="text-center">Insumo</th>
+                <th>Estoque Atual</th>
+                <th class="text-center">Qtde. Insumo/Unid</th>
+                <th class="text-center">Qtde. Fabricação</th>
+                <th class="text-center">Qtde. Necessária do Insumo</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($this->infos as $info): ?>
+                <tr>
+                    <td class="<?php if($info['situacao'] == 1):?>desabilita<?php elseif ($info['situacao'] == 2):?>habilita<?php endif;?>">
+                        <?php if($info['situacao'] == 1):?>
+                            <button type="button" class="btn btn-danger btn-sm">Estoque Baixo</button>
+                        <?php elseif ($info['situacao'] == 2):?>
+                            <button type="button" class="btn btn-success btn-sm">Estoque OK</button>
+                        <?php endif;?>
+                    </td>
+                    <td><?= $info['codigo']?></td>
+                    <td><?= $info['insumo']?></td>
+                    <td><?= $info['estoqueAtual']?></td>
+                    <td><?= $info['qtdeUni'] ?></td>
+                    <td><?= $info['qtdedesejada']?></td>
+                    <td><?= ($info['qtdedesejada'] * $info['qtdeUni']) ?></td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    if($('.desabilita').length){
+        botao(false);
+    } else {
+        botao(true);
+    }
+</script>

@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d77c379d-08e5-433c-b1ea-c9983c51610e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/infofabricacao.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Produto/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Produto/src/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Fabricacao/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Fabricacao/config/module.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Fabricacao/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Fabricacao/src/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Fabricacao/src/Factory/IndexControllerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Fabricacao/src/Factory/IndexControllerFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/cadastro.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/cadastro.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/editar.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/index.phtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,14 +23,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="module.config.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/module/Fabricacao/config/module.config.php">
+      <file leaf-file-name="cadastro.phtml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/cadastro.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
+            <state relative-caret-position="271">
+              <caret line="58" column="114" selection-start-line="58" selection-start-column="106" selection-end-line="58" selection-end-column="114" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Fabricacao/src/Controller/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="662">
+              <caret line="84" column="45" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
               <folding>
-                <element signature="e#303#352#0#PHP" expanded="true" />
+                <element signature="e#314#345#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="infofabricacao.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/infofabricacao.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="798">
+              <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -33,7 +57,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cadas</find>
       <find>form</find>
       <find>&lt;form</find>
       <find>mate</find>
@@ -63,6 +86,7 @@
       <find>Código do produto</find>
       <find>Nome do insumo</find>
       <find>Fabri</find>
+      <find>Descrição</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -71,8 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/module/Insumo/src/Model/Insumos.php" />
-        <option value="$PROJECT_DIR$/module/Insumo/src/Model/Insumo.php" />
         <option value="$PROJECT_DIR$/config/autoload/global.php" />
         <option value="$PROJECT_DIR$/module/Inicial/config/module.config.php" />
         <option value="$PROJECT_DIR$/module/Entity/Insumo.php" />
@@ -99,7 +121,6 @@
         <option value="$PROJECT_DIR$/public/js/formula.js" />
         <option value="$PROJECT_DIR$/module/Insumo/src/Model/InsumoModelo.php" />
         <option value="$PROJECT_DIR$/module/Produto/src/Factory/IndexControllerFactory.php" />
-        <option value="$PROJECT_DIR$/module/Insumo/view/insumo/index/index.phtml" />
         <option value="$PROJECT_DIR$/module/Produto/view/produto/index/cadastro.phtml" />
         <option value="$PROJECT_DIR$/module/Produto/view/produto/index/editar.phtml" />
         <option value="$PROJECT_DIR$/module/Produto/src/Model/ProdutoFormulaModelo.php" />
@@ -109,19 +130,22 @@
         <option value="$PROJECT_DIR$/module/Fabricacao/src/Model/ProdutoFormulaModelo.php" />
         <option value="$PROJECT_DIR$/module/Fabricacao/src/Model/ProdutoModelo.php" />
         <option value="$PROJECT_DIR$/module/Fabricacao/src/Module.php" />
-        <option value="$PROJECT_DIR$/module/Fabricacao/src/Factory/IndexControllerFactory.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/module/Fabricacao/src/Model/FabricacaoFormulaModelo.php" />
         <option value="$PROJECT_DIR$/module/Fabricacao/src/Model/FabricacaoModelo.php" />
         <option value="$PROJECT_DIR$/layout/layout.phtml" />
-        <option value="$PROJECT_DIR$/module/Fabricacao/src/Controller/IndexController.php" />
-        <option value="$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/index.phtml" />
         <option value="$PROJECT_DIR$/module/Entity/FabricacaoFormula.php" />
         <option value="$PROJECT_DIR$/module/Entity/Fabricacao.php" />
         <option value="$PROJECT_DIR$/module/Produto/config/module.config.php" />
         <option value="$PROJECT_DIR$/module/Produto/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/module/Produto/view/produto/index/index.phtml" />
+        <option value="$PROJECT_DIR$/module/Fabricacao/src/Factory/IndexControllerFactory.php" />
+        <option value="$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/index.phtml" />
+        <option value="$PROJECT_DIR$/module/Insumo/view/insumo/index/index.phtml" />
         <option value="$PROJECT_DIR$/module/Fabricacao/config/module.config.php" />
+        <option value="$PROJECT_DIR$/module/Fabricacao/src/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/infofabricacao.phtml" />
+        <option value="$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/cadastro.phtml" />
       </list>
     </option>
   </component>
@@ -221,6 +245,12 @@
               <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
               <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
               <item name="Fabricacao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -229,6 +259,45 @@
               <item name="module" type="462c0819:PsiDirectoryNode" />
               <item name="Fabricacao" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="Fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="Fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="Fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="Fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="fabricacao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="Fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -246,11 +315,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Fabricacao\view\fabricacao\index" />
       <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Entity" />
       <recent name="C:\xampp2\htdocs\realtec-fabricacao\module" />
       <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Produto\view\produto\index" />
       <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Produto\src\Model" />
-      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Produto\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Insumo\view\insumo" />
@@ -286,12 +355,12 @@
       <workItem from="1566332947585" duration="1425000" />
       <workItem from="1566407321954" duration="24711000" />
       <workItem from="1566580283554" duration="1909000" />
-      <workItem from="1566820296837" duration="28764000" />
+      <workItem from="1566820296837" duration="32485000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61418000" />
+    <option name="totallyTimeSpent" value="65139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="39" width="1552" height="840" extended-state="0" />
@@ -306,7 +375,7 @@
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29160935" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.29160935" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -342,20 +411,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/module/Inicial/src/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/autoload/global.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -404,13 +459,6 @@
           <folding>
             <element signature="e#116#147#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Insumo/view/insumo/index/cadastro.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="71" column="44" lean-forward="true" selection-start-line="71" selection-start-column="44" selection-end-line="75" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -561,20 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Insumo/view/insumo/index/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="66" column="162" lean-forward="true" selection-start-line="66" selection-start-column="86" selection-end-line="66" selection-end-column="162" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Insumo/config/module.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/modules.config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -593,33 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Fabricacao/src/Factory/IndexControllerFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="e#120#151#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Entity/Insumo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2159">
-          <caret line="132" column="7" lean-forward="true" selection-start-line="132" selection-start-column="7" selection-end-line="132" selection-end-column="7" />
-          <folding>
-            <element signature="e#108#140#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Entity/ProdutoFormula.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -650,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="79" column="71" selection-start-line="79" selection-start-column="71" selection-end-line="79" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/Entity/Fabricacao.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -673,16 +673,6 @@
           <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="34" />
           <folding>
             <element signature="e#108#140#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Fabricacao/src/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="43" column="86" lean-forward="true" selection-start-line="43" selection-start-column="86" selection-end-line="43" selection-end-column="86" />
-          <folding>
-            <element signature="e#314#345#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -737,13 +727,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/module/Insumo/config/module.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Fabricacao/src/Factory/IndexControllerFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding>
+            <element signature="e#120#151#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Insumo/view/insumo/index/cadastro.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Insumo/view/insumo/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="97" column="5" lean-forward="true" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Entity/ProdutoFormula.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Entity/Insumo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="165" column="35" selection-start-line="165" selection-start-column="20" selection-end-line="165" selection-end-column="35" />
+          <folding>
+            <element signature="e#108#140#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/module/Fabricacao/config/module.config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
+        <state relative-caret-position="391">
+          <caret line="51" column="41" lean-forward="true" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
           <folding>
             <element signature="e#303#352#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Fabricacao/src/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="84" column="45" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
+          <folding>
+            <element signature="e#314#345#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/infofabricacao.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Fabricacao/view/fabricacao/index/cadastro.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="58" column="114" selection-start-line="58" selection-start-column="106" selection-end-line="58" selection-end-column="114" />
         </state>
       </provider>
     </entry>

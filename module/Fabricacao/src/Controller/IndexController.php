@@ -9,6 +9,9 @@ namespace Fabricacao\Controller;
 
 use Doctrine\ORM\EntityManager;
 use Fabricacao\Model\FabricacaoModelo;
+use Insumo\Model\InsumoModelo;
+use Produto\Model\ProdutoFormulaModelo;
+use Produto\Model\ProdutoModelo;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
@@ -26,8 +29,8 @@ class IndexController extends AbstractActionController
         $view = new ViewModel();
 
         $fabricacaoModelo = new FabricacaoModelo($this->entityManager);
-        if($this->params()->fromRoute('id')) {
-            try{
+        if ($this->params()->fromRoute('id')) {
+            try {
                 $fabricacaoModelo->delete($this->params()->fromRoute('id'));
                 $view->setVariable('msgs', 'Fabricação removida!');
             } catch (\Exception $e) {
@@ -45,6 +48,41 @@ class IndexController extends AbstractActionController
         }
 
         $view->setVariable('valorFabricacao', $valorProdutos);
+        return $view;
+    }
+
+    public function cadastroAction()
+    {
+        $view = new ViewModel();
+
+        $produtoModelo = new ProdutoModelo($this->entityManager);
+        $view->setVariable('produtos', $produtoModelo->getList());
+        return $view;
+    }
+
+    public function infofabricacaoAction()
+    {
+        $view = new ViewModel();
+        $view->setTerminal(true);
+
+        $produtoFormula = (new ProdutoFormulaModelo($this->entityManager))->getProdutoFormula($this->params()->fromRoute('idProduto'));
+        $quantidadeDesejada = $this->params()->fromRoute('qtde');
+
+        $formulas = [];
+
+        foreach ($produtoFormula as $formula) {
+            $formulas[] = [
+                'codigo' => $formula->getInsumo()->getCodigo(),
+                'insumo' => $formula->getInsumo()->getNome(),
+                'estoqueAtual' => $formula->getInsumo()->getEstoqueGeral(),
+                'qtdeUni' => $formula->getQtde(),
+                'qtdedesejada' => $quantidadeDesejada,
+                'situacao' => (($formula->getQtde() * $quantidadeDesejada) > $formula->getInsumo()->getEstoqueGeral())? '1' : '2',
+
+            ];
+        }
+
+        $view->setVariable('infos', $formulas);
         return $view;
     }
 }

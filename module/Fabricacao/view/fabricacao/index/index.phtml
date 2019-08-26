@@ -33,7 +33,7 @@
                                     </a>
                                 </div>
                                 <div class="col col-md-6  text-right">
-                                    <h3 class="mb-0">Lista de Produtos</h3>
+                                    <h3 class="mb-0">Lista de Fabricação</h3>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                                                     <span class="fa fa-database"></span> Ações
                                                 </button>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                    <a class="dropdown-item" href="#"><span
+                                                    <a class="dropdown-item" href="#" onclick="remover('<?= $fabri->getCodigo() ?>', <?= $fabri->getIdFabricacao() ?>)"><span
                                                                 class="fa fa-window-close"></span> Remover</a>
                                                 </div>
                                             </div>
@@ -95,7 +95,7 @@
     function remover(nome, id) {
         var r = confirm("Deseja remover " + nome + "?");
         if (r == true) {
-            window.location.assign("../produto/" + id);
+            window.location.assign("../fabricacao/" + id);
         } else {
             return false;
         }

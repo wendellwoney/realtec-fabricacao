@@ -12,6 +12,7 @@ use Doctrine\ORM\EntityManager;
 use Entity\Fabricacao;
 use Entity\FabricacaoFormula;
 use Entity\Produto;
+use Insumo\Model\InsumoModelo;
 
 class FabricacaoModelo implements IModel
 {
@@ -66,17 +67,26 @@ class FabricacaoModelo implements IModel
         }
     }
 
-    public function delete($id)
+    public function delete($idFabricacao)
     {
         try {
-            $fabricacao = $this->get($id);
-            $fabricacao->setAtivo(0);
-            $fabricacao->setDataRemocao(new \DateTime('now'));
-            $this->entityManager->beginTransaction();
-            $this->entityManager->merge($fabricacao);
+            $fabricacaoFormulaMOdel = new FabricacaoFormulaModelo($this->entityManager);
+            $insumoModelo = new InsumoModelo($this->entityManager);
+            $fabricacao = $this->get($idFabricacao);
+
+            //Retornar o estoque
+            $formulaFabricacao = $fabricacaoFormulaMOdel->getFabricacaoFormula($idFabricacao);
+            foreach ($formulaFabricacao as $formula){
+                $insumo = $insumoModelo->get($formula->getInsumo()->getIdInsumo());
+                $insumo->setEstoqueGeral(($insumo->getEstoqueGeral() + ($fabricacao->getQuantidade() * $formula->getQtde())));
+                $insumoModelo->update($insumo);
+            }
+            //Remover a fabricacao_formula
+            $fabricacaoFormulaMOdel->removeFormulaFabricacao($idFabricacao);
+            //Remover a fabricacao
+            $this->entityManager->remove($fabricacao);
             $this->entityManager->flush();
-            $this->entityManager->commit();
-            $this->entityManager->refresh($fabricacao);
+
             return 'Fabricação removida!';
         } catch (\Exception $e) {
             throw new \Exception('Erro ao remover a fabricação, por favor tente novamente mais tarde!');

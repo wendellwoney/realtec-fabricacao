@@ -84,9 +84,9 @@ class FabricacaoFormulaModelo implements IModel
     public function removeFormulaFabricacao($idFabricao)
     {
         $fabricacaoFormula = $this->getFabricacaoFormula($idFabricao);
-
         foreach ($fabricacaoFormula as $fabricacao){
             $this->entityManager->remove($fabricacao);
+            $this->entityManager->flush();
         }
     }
 

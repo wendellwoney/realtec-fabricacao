@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d77c379d-08e5-433c-b1ea-c9983c51610e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/formula.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Produto/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Produto/src/Controller/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Produto/src/Model/ProdutoModelo.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Produto/src/Model/ProdutoModelo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/Produto/view/produto/index/cadastro.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Produto/view/produto/index/cadastro.phtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/Produto/src/Controller/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="254">
@@ -28,6 +25,15 @@
               <folding>
                 <element signature="e#311#342#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cadastro.phtml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/module/Produto/view/produto/index/cadastro.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
             </state>
           </provider>
         </entry>
@@ -143,9 +149,9 @@
         <option value="$PROJECT_DIR$/module/Produto/view/produto/index/index.phtml" />
         <option value="$PROJECT_DIR$/module/Produto/config/module.config.php" />
         <option value="$PROJECT_DIR$/public/js/formula.js" />
-        <option value="$PROJECT_DIR$/module/Produto/view/produto/index/cadastro.phtml" />
         <option value="$PROJECT_DIR$/module/Produto/src/Model/ProdutoModelo.php" />
         <option value="$PROJECT_DIR$/module/Produto/src/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/module/Produto/view/produto/index/cadastro.phtml" />
       </list>
     </option>
   </component>
@@ -256,27 +262,6 @@
               <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
               <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Insumo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Insumo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="Insumo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
               <item name="Produto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -293,6 +278,30 @@
               <item name="Produto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="Produto" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="Produto" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="produto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="realtec-fabricacao" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="Produto" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="produto" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="realtec-fabricacao" type="b2602c69:ProjectViewProjectNode" />
@@ -361,12 +370,12 @@
       <workItem from="1566332947585" duration="1425000" />
       <workItem from="1566407321954" duration="24711000" />
       <workItem from="1566580283554" duration="1909000" />
-      <workItem from="1566820296837" duration="19496000" />
+      <workItem from="1566820296837" duration="19707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52150000" />
+    <option name="totallyTimeSpent" value="52361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="39" width="1552" height="840" extended-state="0" />
@@ -381,7 +390,7 @@
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.29160935" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29160935" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -708,13 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Produto/view/produto/index/cadastro.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2431">
-          <caret line="173" column="41" selection-start-line="173" selection-start-column="41" selection-end-line="173" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/Produto/view/produto/index/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -770,6 +772,13 @@
           <folding>
             <element signature="e#311#342#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Produto/view/produto/index/cadastro.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
         </state>
       </provider>
     </entry>

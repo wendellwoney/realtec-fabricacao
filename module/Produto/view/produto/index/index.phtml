@@ -45,7 +45,7 @@
                                     <th class="text-center">Código</th>
                                     <th>Nome</th>
                                     <th class="text-center">Uni./Medida</th>
-                                    <th class="text-center">Valor Fabricação</th>
+                                    <th class="text-center">Valor Fab. Atual/UNID</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -60,7 +60,7 @@
                                                 </button>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                     <a class="dropdown-item"
-                                                       href=""><span
+                                                       href="<?= $this->url('ProdutoEditar', ['idProduto' => $produto->getIdProduto()])?>"><span
                                                                 class="fa fa-edit"></span> Editar</a>
                                                     <a class="dropdown-item" href="#"><span
                                                                 class="fa fa-window-close"></span> Remover</a>

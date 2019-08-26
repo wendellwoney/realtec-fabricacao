@@ -49,6 +49,16 @@ return [
                         'action'     => 'cadastro',
                     ],
                 ],
+            ],
+            'ProdutoEditar' => [
+                'type' => Segment::class,
+                'options' => [
+                    'route'    => '/produto/editar/:idProduto[/]',
+                    'defaults' => [
+                        'controller' => Controller\IndexController::class,
+                        'action'     => 'editar',
+                    ],
+                ],
             ]
         ],
     ],

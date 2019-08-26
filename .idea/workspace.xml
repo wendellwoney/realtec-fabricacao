@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d77c379d-08e5-433c-b1ea-c9983c51610e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/module/Entity/Produto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Entity/ProdutoFormula.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Produto/config/module.config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Produto/src/Controller/IndexController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Produto/src/Factory/IndexControllerFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Produto/src/Model/IModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Produto/src/Model/ProdutoFormulaModelo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Produto/src/Model/ProdutoModelo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Produto/src/Module.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Produto/view/error/404.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Produto/view/error/index.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Produto/view/produto/index/cadastro.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Produto/view/produto/index/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/realtec-fabricacao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/realtec-fabricacao.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/modules.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/modules.config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/layout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/layout/layout.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Produto/view/produto/index/cadastro.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Produto/view/produto/index/cadastro.phtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,8 +28,8 @@
       <file leaf-file-name="cadastro.phtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/module/Produto/view/produto/index/cadastro.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="173" column="8" selection-start-line="173" selection-start-column="8" selection-end-line="173" selection-end-column="8" />
+            <state relative-caret-position="188">
+              <caret line="187" column="129" selection-start-line="187" selection-start-column="129" selection-end-line="187" selection-end-column="129" />
             </state>
           </provider>
         </entry>
@@ -409,18 +392,18 @@
       <workItem from="1566332947585" duration="1425000" />
       <workItem from="1566407321954" duration="24711000" />
       <workItem from="1566580283554" duration="1909000" />
-      <workItem from="1566820296837" duration="15686000" />
+      <workItem from="1566820296837" duration="17458000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48340000" />
+    <option name="totallyTimeSpent" value="50112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="39" width="1552" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496749" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496749" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -429,7 +412,7 @@
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29160935" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29160935" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -812,8 +795,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module/Produto/view/produto/index/cadastro.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="173" column="8" selection-start-line="173" selection-start-column="8" selection-end-line="173" selection-end-column="8" />
+        <state relative-caret-position="188">
+          <caret line="187" column="129" selection-start-line="187" selection-start-column="129" selection-end-line="187" selection-end-column="129" />
         </state>
       </provider>
     </entry>

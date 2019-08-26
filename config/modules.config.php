@@ -26,4 +26,5 @@ return [
     'DoctrineORMModule',
     'Inicial',
     'Insumo',
+    'Produto'
 ];

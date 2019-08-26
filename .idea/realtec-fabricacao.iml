@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/module/Insumo/src" isTestSource="false" packagePrefix="Insumo\" />
+      <sourceFolder url="file://$MODULE_DIR$/module/Produto/src" isTestSource="false" packagePrefix="Produto\" />
       <sourceFolder url="file://$MODULE_DIR$/module/Entity" isTestSource="false" packagePrefix="Entity\" />
       <sourceFolder url="file://$MODULE_DIR$/module/Util" isTestSource="false" packagePrefix="Util\" />
       <sourceFolder url="file://$MODULE_DIR$/module/Inicial/src" isTestSource="false" packagePrefix="Inicial\" />

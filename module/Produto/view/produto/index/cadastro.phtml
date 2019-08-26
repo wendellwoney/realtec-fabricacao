@@ -1,0 +1,176 @@
+<nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+    <div class="container-fluid">
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="<?= $this->url('ProdutoLista') ?>">Produto</a>
+    </div>
+</nav>
+<div class="header bg-gradient-primary pb-5 pt-6 pt-md-0">
+</div>
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="row mt-5">
+                <div class="col-xl-12 mb-5 mb-xl-0">
+
+                    <?php if ($this->msgs): ?>
+                        <div class="alert alert-success" role="alert">
+                            <strong>Sucesso!</strong> <?= $this->msgs; ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($this->msge): ?>
+                        <div class="alert alert-danger" role="alert">
+                            <strong>Erro!</strong> <?= $this->msge; ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <div class="card shadow">
+                        <div class="card-header border-0">
+                            <div class="row align-items-center">
+                                <div class="col col-md-12">
+                                    <h3 class="mb-0"><span class="fa fa-box"></span> Cadastro de Produto</h3>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col col-md-12">
+                                    <form action="" method="post">
+                                        <div class="p-2">
+                                            Código do produto <span class="text-red">*</span>
+                                            <div class="form-group">
+                                                <input required maxlength="15" type="text" class="form-control"
+                                                       id="codigo" name="codigo" placeholder="Ex: 0001">
+                                            </div>
+                                            Nome do insumo <span class="text-red">*</span>
+                                            <div class="form-group">
+                                                <input required maxlength="100" type="text" class="form-control"
+                                                       name="nome" id="nome" placeholder="Ex: Produto x">
+                                            </div>
+                                            <span data-toggle="tooltip" data-placement="top"
+                                                  title="A unidade de medida reflete diretamente na fabricação do produto.">Unidade de medida</span>
+                                            <span class="text-red">*</span> <span class="ni ni-tag text-red"
+                                                                                  data-toggle="tooltip"
+                                                                                  data-placement="top"
+                                                                                  title="A unidade de medida reflete diretamente na fabricação do produto."></span>
+                                            <div class="form-group">
+                                                <select name="unidade_medida" id="unidade_medida" class="form-control"
+                                                        required>
+                                                    <option></option>
+                                                    <optgroup label="Pesos">
+                                                        <option value="T">TONELADA</option>
+                                                        <option value="KG">QUILOGRAMA</option>
+                                                        <option value="G">GRAMA</option>
+                                                        <option value="MG">MILIGRAMA</option>
+                                                    </optgroup>
+                                                    <optgroup label="Líquidos">
+                                                        <option value="L">LITRO</option>
+                                                        <option value="ML">MILILITRO</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                            Descrição
+                                            <div class="form-group">
+                                                <textarea name="descricao" id="descricao" class="form-control" rows="3"
+                                                          placeholder="Descrição do Produto"></textarea>
+                                            </div>
+
+                                            <div class="card shadow">
+                                                <div class="card-header border-0">
+                                                    <div class="row align-items-center">
+                                                        <div class="col col-md-12">
+                                                            <h3 class="mb-0"><span class="fa fa-database"></span>
+                                                                Formulação do Produto</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-center">
+                                                        <div class="col col-md-12">
+                                                            <div class="table-responsive">
+                                                                <!-- Projects table -->
+                                                                <table id="example"
+                                                                       class="dataTable table align-items-cente">
+                                                                    <thead>
+                                                                    <tr>
+                                                                        <th class="text-center">Código</th>
+                                                                        <th>Nome</th>
+                                                                        <th>Quantidade</th>
+                                                                        <th class="text-center">Unidade de Medida</th>
+                                                                        <th class="text-center">Ação</th>
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    <?php foreach ($this->insumos as $insumo): ?>
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <strong><div id="codigo<?= $insumo->getIdInsumo()?>"><?= $insumo->getCodigo() ?></div></strong>
+                                                                            </td>
+                                                                            <td><div id="nome<?= $insumo->getIdInsumo()?>"><?= $insumo->getNome() ?></div></td>
+                                                                            <td class="text-center">
+                                                                                <input maxlength="15"
+                                                                                       type="text" class="form-control form-control-sm decimal"
+                                                                                       id="quantidade<?= $insumo->getIdInsumo()?>" name="quantidade"
+                                                                                       placeholder="Ex: 1">
+                                                                            </td>
+                                                                            <td class="text-center"><div id="unidade<?= $insumo->getIdInsumo()?>"><?= $insumo->getUnidadeMedida() ?></div></td>
+                                                                            <td class="text-center">
+                                                                                <button type="button"
+                                                                                        onclick="addFormula(<?= $insumo->getIdInsumo()?>)"
+                                                                                        class="btn btn-info btn-sm"><span
+                                                                                            class="fa fa-plus"></span>
+                                                                                    Adicionar
+                                                                                </button>
+                                                                            </td>
+                                                                        </tr>
+                                                                    <?php endforeach; ?>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+
+                                                            <h4><span class="fa fa-list"></span> Insumos adicionados a fórmula</h4>
+                                                            <div class="table-responsive">
+                                                                <!-- Projects table -->
+                                                                <table id="formula"
+                                                                       class="dataTable table align-items-cente">
+                                                                    <thead>
+                                                                    <tr>
+                                                                        <th class="text-center">Código</th>
+                                                                        <th>Nome</th>
+                                                                        <th>Quantidade</th>
+                                                                        <th class="text-center">Unidade de Medida</th>
+                                                                        <th class="text-center">Ação</th>
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p> </p>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-success"><span
+                                                            class="fa fa-plus"></span> Cadastrar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.decimal').mask('000000000000000.00', {reverse: true});
+    });
+</script>
+
+<script>
+    function addFormula(idInsumo) {
+
+    }
+</script>

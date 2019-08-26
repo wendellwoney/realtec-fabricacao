@@ -31,9 +31,9 @@ return [
     'router' => [
         'routes' => [
             'ProdutoLista' => [
-                'type' => Literal::class,
+                'type' => Segment::class,
                 'options' => [
-                    'route'    => '/produto',
+                    'route'    => '/produto[/][:id]',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
                         'action'     => 'index',

@@ -28,7 +28,17 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
         $view = new ViewModel();
+
         $produtoModelo = new ProdutoModelo($this->entityManager);
+        if($this->params()->fromRoute('id')) {
+            try{
+                $produtoModelo->delete($this->params()->fromRoute('id'));
+                $view->setVariable('msgs', 'Produto removido!');
+            } catch (\Exception $e) {
+                $view->setVariable('msge', $e->getMessage());
+            }
+        }
+
         $produtos = $produtoModelo->getList();
         $view->setVariable('produtos', $produtos);
 

@@ -25,7 +25,8 @@
             "Inicial\\": "module/Inicial/src/",
             "Insumo\\": "module/Insumo/src/",
             "Util\\": "module/Util/",
-            "Produto\\": "module/Produto/src/"
+            "Produto\\": "module/Produto/src/",
+            "Fabricacao\\": "module/Fabricacao/src/"
         }
     },
     "extra": [],

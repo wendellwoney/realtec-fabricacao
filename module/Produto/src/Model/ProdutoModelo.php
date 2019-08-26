@@ -43,9 +43,9 @@ class ProdutoModelo implements IModel
             $this->entityManager->flush();
             $this->entityManager->commit();
             $this->entityManager->refresh($insumo);
-            return 'Insumo cadastrado com sucesso';
+            return 'Produto cadastrado com sucesso';
         } catch (\Exception $e) {
-            throw new \Exception('Erro no Cadastro do insumo, por favor tente novamente mais tarde!');
+            throw new \Exception('Erro no Cadastro do produto, por favor tente novamente mais tarde!');
         }
     }
 
@@ -57,9 +57,9 @@ class ProdutoModelo implements IModel
             $this->entityManager->flush();
             $this->entityManager->commit();
             $this->entityManager->refresh($insumo);
-            return 'Insumo editado com sucesso';
+            return 'Produto editado com sucesso';
         } catch (\Exception $e) {
-            throw new \Exception('Erro ao editar o insumo, por favor tente novamente mais tarde!');
+            throw new \Exception('Erro ao editar o produto, por favor tente novamente mais tarde!');
         }
     }
 
@@ -74,9 +74,9 @@ class ProdutoModelo implements IModel
             $this->entityManager->flush();
             $this->entityManager->commit();
             $this->entityManager->refresh($insumo);
-            return 'Insumo removido com sucesso';
+            return 'Produto removido com sucesso';
         } catch (\Exception $e) {
-            throw new \Exception('Erro ao remover o insumo, por favor tente novamente mais tarde!');
+            throw new \Exception('Erro ao remover o produto, por favor tente novamente mais tarde!');
         }
     }
 

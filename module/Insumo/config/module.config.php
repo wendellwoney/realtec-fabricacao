@@ -9,6 +9,7 @@ namespace Insumo;
 
 use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
 use Insumo\Factory\IndexControllerFactory;
+use Insumo\Factory\InsumoEntradaControllerFactory;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -60,11 +61,32 @@ return [
                     ],
                 ],
             ],
+            'EstoqueInsumoLista' => [
+                'type' => Segment::class,
+                'options' => [
+                    'route'    => '/insumo-entrada[/][:id]',
+                    'defaults' => [
+                        'controller' => Controller\InsumoEntradaController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
+            'EstoqueInsumoCadastro' => [
+                'type' => Segment::class,
+                'options' => [
+                    'route'    => '/insumo-entrada/cadastro',
+                    'defaults' => [
+                        'controller' => Controller\InsumoEntradaController::class,
+                        'action'     => 'cadastro',
+                    ],
+                ],
+            ]
         ],
     ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => IndexControllerFactory::class,
+            Controller\InsumoEntradaController::class => InsumoEntradaControllerFactory::class,
         ],
     ],
     'view_manager' => [

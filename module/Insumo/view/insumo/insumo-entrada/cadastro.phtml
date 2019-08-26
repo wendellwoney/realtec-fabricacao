@@ -1,0 +1,93 @@
+<nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+    <div class="container-fluid">
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="<?= $this->url('EstoqueInsumoLista')?>">Entrada de Insumos</a>
+    </div>
+</nav>
+<div class="header bg-gradient-primary pb-5 pt-6 pt-md-0">
+</div>
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="row mt-5">
+                <div class="col-xl-12 mb-5 mb-xl-0">
+
+                    <?php if ($this->msgs): ?>
+                        <div class="alert alert-success" role="alert">
+                            <strong>Sucesso!</strong> <?= $this->msgs; ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($this->msge): ?>
+                        <div class="alert alert-danger" role="alert">
+                            <strong>Erro!</strong> <?= $this->msge; ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <div class="card shadow">
+                        <div class="card-header border-0">
+                            <div class="row align-items-center">
+                                <div class="col col-md-12">
+                                    <h3 class="mb-0"><span class="fa fa-box"></span> Entrada de Insumos</h3>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col col-md-12">
+                                    <form method="post" action="">
+                                        <div class="table-responsive">
+                                            <!-- Projects table -->
+                                            <table id="example" class="dataTable table align-items-cente">
+                                                <thead>
+                                                <tr>
+                                                    <th class="text-center">Código</th>
+                                                    <th>Nome</th>
+                                                    <th class="text-center">Unidade de Medida</th>
+                                                    <th class="text-center">Qtd. Entrada</th>
+                                                    <th class="text-center">Valor Total</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <?php foreach ($this->insumos as $insumo): ?>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <strong><?= $insumo->getCodigo() ?></strong>
+                                                        </td>
+                                                        <td><?= $insumo->getNome() ?></td>
+                                                        <td class="text-center"><?= $insumo->getUnidadeMedida() ?></td>
+                                                        <td class="text-center"><input maxlength="15"
+                                                                                       type="text"
+                                                                                       class="form-control decimal"
+                                                                                       id="codigo"
+                                                                                       name="qtde[<?= $insumo->getIdInsumo() ?>]"
+                                                                                       placeholder="Ex: 10.00">
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <input maxlength="15" type="text"
+                                                                   class="form-control decimal" id="codigo"
+                                                                   name="valor[<?= $insumo->getIdInsumo() ?>]"
+                                                                   placeholder="Ex: 10.00"
+                                                        </td>
+                                                    </tr>
+                                                <?php endforeach; ?>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-success"><span
+                                                        class="fa fa-plus"></span> Cadastrar
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.decimal').mask('000000000000000.00', {reverse: true});
+    });
+</script>

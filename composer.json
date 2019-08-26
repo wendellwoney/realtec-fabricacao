@@ -27,9 +27,10 @@
     },
     "autoload": {
         "psr-4": {
-            "Entity\\": "module/Entity",
+            "Entity\\": "module/Entity/",
             "Inicial\\": "module/Inicial/src/",
-            "Insumo\\": "module/Insumo/src/"
+            "Insumo\\": "module/Insumo/src/",
+            "Util\\": "module/Util/"
         }
     },
     "extra": [],

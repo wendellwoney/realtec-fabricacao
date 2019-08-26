@@ -9,16 +9,16 @@
 namespace Insumo\Factory;
 
 use Doctrine\ORM\EntityManager;
-use Insumo\Controller\EstoqueController;
+use Insumo\Controller\InsumoEntradaController;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
-class EstoqueControllerFactory
+class InsumoEntradaControllerFactory
 {
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
         $em = $container->get(EntityManager::class);
 
-        return new EstoqueController($em);
+        return new InsumoEntradaController($em);
     }
 }

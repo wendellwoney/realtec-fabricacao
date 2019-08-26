@@ -1,0 +1,99 @@
+<nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+    <div class="container-fluid">
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
+           href="<?= $this->url('EstoqueInsumoLista') ?>">Entrada de Insumos</a>
+    </div>
+</nav>
+<div class="header bg-gradient-primary pb-5 pt-6 pt-md-0">
+</div>
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="">
+            <div class="row mt-5">
+                <div class="col-xl-12 mb-5 mb-xl-0">
+
+                    <?php if ($this->msgs): ?>
+                        <div class="alert alert-success" role="alert">
+                            <strong>Sucesso!</strong> <?= $this->msgs; ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($this->msge): ?>
+                        <div class="alert alert-danger" role="alert">
+                            <strong>Erro!</strong> <?= $this->msge; ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <div class="card shadow">
+                        <div class="card-header border-0">
+                            <div class="row align-items-center">
+                                <div class="col col-md-6">
+                                    <a href="<?= $this->url('EstoqueInsumoCadastro'); ?>">
+                                        <button class="btn btn-success"><span class="fa fa-plus"></span> Cadastrar
+                                        </button>
+                                    </a>
+                                </div>
+                                <div class="col col-md-6  text-right">
+                                    <h3 class="mb-0">Lista de Insumos</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <!-- Projects table -->
+                            <table id="example" class="dataTable table align-items-cente">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Código Insumo</th>
+                                    <th>Insumo</th>
+                                    <th>Uni.</th>
+                                    <th class="text-center">Entrada</th>
+                                    <th class="text-center">Quantidade</th>
+                                    <th class="text-center">Valor</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php foreach ($this->entradas as $entrada): ?>
+                                    <tr>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-primary dropdown-toggle btn-sm" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                    <span class="fa fa-database"></span> Ações
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item"
+                                                    <a class="dropdown-item" href="#" onclick="remover('<?= $entrada->getInsumo()->getNome() ?>', <?= $entrada->getIdEntradaInsumo() ?>)"><span
+                                                                class="fa fa-window-close"></span> Remover</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><strong><?= $entrada->getInsumo()->getCodigo() ?></strong></td>
+                                        <td><?= $entrada->getInsumo()->getNome() ?></td>
+                                        <td><?= $entrada->getInsumo()->getUnidadeMedida() ?></td>
+                                        <td class="text-center"><?= $entrada->getDataEntrada()->format('d/m/Y') ?></td>
+                                        <td class="text-center"><?= $entrada->getQuantidade() ?></td>
+                                        <td class="text-center"><?= 'R$ ' . number_format($entrada->getValor(), 2, '.', '') ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function remover(nome, id) {
+        var r = confirm("Deseja remover " + nome + "?");
+        if (r == true) {
+            window.location.assign("../insumo-entrada/" + id);
+        } else {
+            return false;
+        }
+    }
+</script>
+

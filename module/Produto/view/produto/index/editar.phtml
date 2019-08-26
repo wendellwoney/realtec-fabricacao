@@ -41,11 +41,11 @@
                                                        id="codigo" name="codigo" placeholder="Ex: 0001"
                                                        value="<?= $this->produto->getCodigo() ?>">
                                             </div>
-                                            Nome do insumo <span class="text-red">*</span>
+                                            Nome do produto <span class="text-red">*</span>
                                             <div class="form-group">
                                                 <input required maxlength="100" type="text" class="form-control"
                                                        name="nome" id="nome" placeholder="Ex: Produto x"
-                                                       value="<?php if ($this->produto->getUnidadeMedida() == 'T'): ?> selected <?php endif; ?>">
+                                                       value="<?= $this->produto->getNome() ?>">
                                             </div>
                                             <span data-toggle="tooltip" data-placement="top"
                                                   title="A unidade de medida reflete diretamente na fabricação do produto.">Unidade de medida</span>

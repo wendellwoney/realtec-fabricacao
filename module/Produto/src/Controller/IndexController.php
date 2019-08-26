@@ -79,7 +79,7 @@ class IndexController extends AbstractActionController
                         $view->setVariable('msge', $e->getMessage());
                     }
                 }
-                $view->setVariable('msgs', 'Produto cadastrado com sucesso!');
+                $view->setVariable('msgs', 'Produto cadastrado!');
             }catch (\Exception $e){
                 $view->setVariable('msge', $e->getMessage());
             }
@@ -97,21 +97,24 @@ class IndexController extends AbstractActionController
         $produtoModelo = new ProdutoModelo($this->entityManager);
         $produtoFormulaModelo = new ProdutoFormulaModelo($this->entityManager);
         if ($this->getRequest()->isPost()) {
-
             //Cadastra o produto e pega o id
-            $produto = new Produto();
-            $produto->setIdProduto(0);
+            $produto = $produtoModelo->get($this->params()->fromPost('idproduto'));
             $produto->setCodigo($this->params()->fromPost('codigo'));
             $produto->setNome($this->params()->fromPost('nome'));
             $produto->setUnidadeMedida($this->params()->fromPost('unidade_medida'));
             $produto->setDescricao($this->params()->fromPost('descricao'));
             $produto->setAtivo('1');
-            $produto->setDataCadastro(new \DateTime('now'));
+            $produto->setDataAtualizacao(new \DateTime('now'));
 
             try{
-                $produtoModelo->create($produto);
+                $produtoModelo->update($produto);
+
+                $produtoFormulaModelo->removeFormulaProduto($this->params()->fromPost('idproduto'));
 
                 foreach ($this->params()->fromPost('insumo') as $idInsumo) {
+
+                    //Remover todos os produtos formulas do produto
+
                     $produtoFormula = new ProdutoFormula();
                     $produtoFormula->setIdProdutoFormula(0);
 
@@ -127,7 +130,7 @@ class IndexController extends AbstractActionController
                         $view->setVariable('msge', $e->getMessage());
                     }
                 }
-                $view->setVariable('msgs', 'Produto cadastrado com sucesso!');
+                $view->setVariable('msgs', 'Produto editado!');
             }catch (\Exception $e){
                 $view->setVariable('msge', $e->getMessage());
             }

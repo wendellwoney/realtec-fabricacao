@@ -26,11 +26,6 @@ class ProdutoFormulaModelo implements IModel
         return $this->entityManager->getRepository(ProdutoFormula::class)->findAll();
     }
 
-    public function get($id)
-    {
-        return $this->entityManager->getRepository(ProdutoFormula::class)->find($id);
-    }
-
     public function getProdutoFormula($idProduto)
     {
         $produtoModelo = new ProdutoModelo($this->entityManager);
@@ -84,6 +79,20 @@ class ProdutoFormulaModelo implements IModel
             return 'Insumo removido com sucesso';
         } catch (\Exception $e) {
             throw new \Exception('Erro ao remover o insumo, por favor tente novamente mais tarde!');
+        }
+    }
+
+    public function get($id)
+    {
+        return $this->entityManager->getRepository(ProdutoFormula::class)->find($id);
+    }
+
+    public function removeFormulaProduto($idProduto)
+    {
+        $produtoFormula = $this->getProdutoFormula($idProduto);
+
+        foreach ($produtoFormula as $produto){
+            $this->entityManager->remove($produto);
         }
     }
 

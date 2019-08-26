@@ -9,9 +9,11 @@
 namespace Fabricacao\Model;
 
 use Doctrine\ORM\EntityManager;
-use Entity\ProdutoFormula;
+use Entity\Fabricacao;
+use Entity\FabricacaoFormula;
+use Entity\Produto;
 
-class ProdutoFormulaModelo implements IModel
+class FabricacaoModelo implements IModel
 {
 
     private $entityManager;
@@ -23,18 +25,16 @@ class ProdutoFormulaModelo implements IModel
 
     public function getList()
     {
-        return $this->entityManager->getRepository(ProdutoFormula::class)->findAll();
-    }
-
-    public function getProdutoFormula($idProduto)
-    {
-        $produtoModelo = new ProdutoModelo($this->entityManager);
-        $produto = $produtoModelo->get($idProduto);
-        return $this->entityManager->getRepository(ProdutoFormula::class)->findBy(
+        return $this->entityManager->getRepository(Fabricacao::class)->findBy(
             [
-                'produto' => $produto
+                'ativo' => '1'
             ]
         );
+    }
+
+    public function get($id)
+    {
+        return $this->entityManager->getRepository(Fabricacao::class)->find($id);
     }
 
     public function create($insumo)
@@ -45,9 +45,9 @@ class ProdutoFormulaModelo implements IModel
             $this->entityManager->flush();
             $this->entityManager->commit();
             $this->entityManager->refresh($insumo);
-            return 'Insumo cadastrado com sucesso';
+            return 'Fabricação cadastrada!';
         } catch (\Exception $e) {
-            throw new \Exception('Erro no Cadastro do insumo, por favor tente novamente mais tarde!');
+            throw new \Exception('Erro no Cadastro da fabricação, por favor tente novamente mais tarde!');
         }
     }
 
@@ -59,9 +59,9 @@ class ProdutoFormulaModelo implements IModel
             $this->entityManager->flush();
             $this->entityManager->commit();
             $this->entityManager->refresh($insumo);
-            return 'Insumo editado com sucesso';
+            return 'Fabricação editada!';
         } catch (\Exception $e) {
-            throw new \Exception('Erro ao editar o insumo, por favor tente novamente mais tarde!');
+            throw new \Exception('Erro ao editar a fabricação, por favor tente novamente mais tarde!');
         }
     }
 
@@ -76,24 +76,21 @@ class ProdutoFormulaModelo implements IModel
             $this->entityManager->flush();
             $this->entityManager->commit();
             $this->entityManager->refresh($insumo);
-            return 'Insumo removido com sucesso';
+            return 'Fabricação removida!';
         } catch (\Exception $e) {
-            throw new \Exception('Erro ao remover o insumo, por favor tente novamente mais tarde!');
+            throw new \Exception('Erro ao remover a fabricação, por favor tente novamente mais tarde!');
         }
     }
 
-    public function get($id)
-    {
-        return $this->entityManager->getRepository(ProdutoFormula::class)->find($id);
-    }
-
-    public function removeFormulaProduto($idProduto)
-    {
-        $produtoFormula = $this->getProdutoFormula($idProduto);
-
-        foreach ($produtoFormula as $produto){
-            $this->entityManager->remove($produto);
+    public function calculaValordaFabricacao($idProduto){
+        $formulaFabricacao = new FabricacaoFormulaModelo($this->entityManager);
+        $compostos = $formulaFabricacao->getProdutoFormula($idProduto);
+        $valorTotal = 0;
+        foreach ($compostos as $composto) {
+            $valorTotal += ($composto->getQtde() * $composto->getvalor());
         }
+
+        return $valorTotal;
     }
 
 }

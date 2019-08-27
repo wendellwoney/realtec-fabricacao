@@ -95,11 +95,16 @@ Este modulo controla a compra de insumos para o sistema ele reflete diretamente 
 
 #### Modulo PRODUTO
 
-Modulo de controde das formulas utilizadas para composição de um produto produto 
+Modulo de controde das formulas utilizadas para composição de um produto 
 
-###### Cadastro de produto
+![produto](https://user-images.githubusercontent.com/29403648/63793991-4c970400-c8d7-11e9-9107-5696e0e549af.gif)
 
+#### Modulo FABRICAÇÃO
 
+Modulo de controle para estoque de produtos fabricados. Com ele você seleciona uma quantidade de um determinado produto que deseja fabricar
+o sistema calcula automaticamente se é possivel ou não fabricar o produto de acordo com o estoque de insumos necessários.
+
+![fabricacao](https://user-images.githubusercontent.com/29403648/63794446-6b49ca80-c8d8-11e9-8822-64abc915f881.gif)
 
 
 

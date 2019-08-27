@@ -73,13 +73,13 @@ Basta copiar toda a pasta **realtec-fabricacao** para o diretório de instalaç�
 
 Este modulo trás um amparato geral dos dados do sistema com alguns dados de acesso rápido.
 
-![tela_inicio](https://user-images.githubusercontent.com/29403648/63791422-de037780-c8d1-11e9-8685-0f468de95ac6.gif)
+![iniciar2](https://user-images.githubusercontent.com/29403648/63805016-de5e3b80-c8ee-11e9-9e71-78b1d170d372.gif)
 
 #### Modulo INSUMOS
 
 Este modulo controla toda a materia prima e o seu respectivo estoque
 
-![tela_insumos](https://user-images.githubusercontent.com/29403648/63791906-d55f7100-c8d2-11e9-9d65-5e71a7d6ab8c.gif)
+![insumo2](https://user-images.githubusercontent.com/29403648/63805084-06e63580-c8ef-11e9-951a-d86bfe690d9e.gif)
 
 #### Modulo ENTRADA DE INSUMOS
 
@@ -87,11 +87,11 @@ Este modulo controla a compra de insumos para o sistema ele reflete diretamente 
 
 ###### Cadastro de entrada insumos
 
-![insumo_1](https://user-images.githubusercontent.com/29403648/63792675-6b47cb80-c8d4-11e9-9139-59027e576474.gif)
+![insumoentrada1](https://user-images.githubusercontent.com/29403648/63805422-c6d38280-c8ef-11e9-93fd-ea35519460fb.gif)
 
 ###### Visualização do estoque
 
-![insumo_2](https://user-images.githubusercontent.com/29403648/63792793-ae09a380-c8d4-11e9-91df-2fe6c49eeafc.gif)
+![insumoentrada2](https://user-images.githubusercontent.com/29403648/63805455-d81c8f00-c8ef-11e9-83c2-df63ecde5233.gif)
 
 #### Modulo PRODUTO
 

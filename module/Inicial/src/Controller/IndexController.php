@@ -9,6 +9,7 @@ namespace Inicial\Controller;
 
 use Doctrine\ORM\EntityManager;
 use Fabricacao\Model\FabricacaoModelo;
+use Insumo\Model\InsumoEntradaModelo;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
@@ -29,6 +30,8 @@ class IndexController extends AbstractActionController
         $view->setVariable('estoqueProduto', $this->estoqueProdutos());
         //Grafico Fabricação
         $view->setVariable('gFabricacao', $this->graficoFabricacao());
+        //Grafico Insumo
+        $view->setVariable('gInsumo', $this->graficoInsumos());
 
         return $view;
     }
@@ -87,5 +90,37 @@ class IndexController extends AbstractActionController
             }
         }
         return $arrayGrafico;
+    }
+
+    private function graficoInsumos()
+    {
+        $moth = [
+            '01' => 'Jan',
+            '02' => 'Fev',
+            '03' => 'Mar',
+            '04' => 'Abr',
+            '05' => 'Mai',
+            '06' => 'Jun',
+            '07' => 'Jul',
+            '08' => 'Ago',
+            '09' => 'Set',
+            '10' => 'Out',
+            '11' => 'Nov',
+            '12' => 'Dez',
+        ];
+
+        $insumoEntradaModelo = new InsumoEntradaModelo($this->entityManager);
+        $insumosEntrada = $insumoEntradaModelo->getList();
+
+        $arrayGraficoInsumo = [];
+        foreach ($insumosEntrada as $entrada) {
+            $ind = $moth[$entrada->getDataEntrada()->format('m')];
+            if (@count($arrayGraficoInsumo[$ind]) == 0) {
+                $arrayGraficoInsumo[$ind] =  ceil($entrada->getQuantidade());
+            } else {
+                $arrayGraficoInsumo[$ind] =  ceil($arrayGraficoInsumo[$ind] + $entrada->getQuantidade());
+            }
+        }
+        return $arrayGraficoInsumo;
     }
 }

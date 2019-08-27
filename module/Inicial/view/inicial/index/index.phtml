@@ -309,10 +309,10 @@
                         }
                     },
                     data: {
-                        labels: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                        labels: [<?php $tot = 0; foreach ($this->gInsumo as $mes => $valor): $tot++;?>'<?= $mes;?>'<?php if($tot < count($this->gFabricacao)){echo ',';}?><?php endforeach;?>],
                         datasets: [{
                             label: 'Sales',
-                            data: [55, 20, 30, 22, 17, 29]
+                            data: [<?php $tot = 0; foreach ($this->gInsumo as $mes => $valor): $tot++;?>'<?= $valor;?>'<?php if($tot < count($this->gFabricacao)){echo ',';}?><?php endforeach;?>]
                         }]
                     }
                 });

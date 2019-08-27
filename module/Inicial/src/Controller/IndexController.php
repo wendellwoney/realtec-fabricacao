@@ -40,6 +40,8 @@ class IndexController extends AbstractActionController
         $view->setVariable('fabricacaoMes', $this->fabricacaoMes());
         //Total produto
         $view->setVariable('totalProduto', $this->totalProdutos());
+        //estoque produto
+        $view->setVariable('estoqueGeral', $this->estoque());
         return $view;
     }
 
@@ -129,6 +131,14 @@ class IndexController extends AbstractActionController
             ];
         }
 
+        if ($mesAtual == 0 && $mesAnterior == 0){
+            $arrayReturn = [
+                'valor' => 0,
+                'porcentagem' => 0,
+                'tik' => 'dow'
+            ];
+        }
+
         return $arrayReturn;
     }
 
@@ -165,6 +175,23 @@ class IndexController extends AbstractActionController
             ];
         }
 
+        if ($mesAtual == 0 && $mesAnterior == 0){
+            $arrayReturn = [
+                'valor' => 0,
+                'porcentagem' => 0,
+                'tik' => 'dow'
+            ];
+        }
+
         return $arrayReturn;
+    }
+
+    private function estoque(){
+        $estoques = $this->graficoFabricacao();
+        $total = 0;
+        foreach ($estoques as $mes => $valor){
+            $total += $valor;
+        }
+        return $total;
     }
 }

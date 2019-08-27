@@ -21,8 +21,8 @@
       <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/module/Inicial/src/Controller/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="118" column="100" selection-start-line="118" selection-start-column="100" selection-end-line="118" selection-end-column="100" />
+            <state relative-caret-position="273">
+              <caret line="194" column="21" selection-start-line="194" selection-start-column="21" selection-end-line="194" selection-end-column="21" />
               <folding>
                 <element signature="e#311#342#0#PHP" expanded="true" />
               </folding>
@@ -33,8 +33,21 @@
       <file leaf-file-name="index.phtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/Inicial/view/inicial/index/index.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="25" column="160" selection-start-line="25" selection-start-column="160" selection-end-line="25" selection-end-column="160" />
+            <state relative-caret-position="163">
+              <caret line="76" column="98" selection-start-line="76" selection-start-column="98" selection-end-line="76" selection-end-column="98" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layout/layout.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="84" column="34" lean-forward="true" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -43,11 +56,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>editar</find>
-      <find>getQuantidade</find>
-      <find>input</find>
-      <find>requi</find>
-      <find>Esto</find>
       <find>getCodigo</find>
       <find>EstoqueInsumoEdita</find>
       <find>Fabrica</find>
@@ -58,7 +66,6 @@
       <find>Fabr</find>
       <find>Código do produto</find>
       <find>Nome do insumo</find>
-      <find>Fabri</find>
       <find>Descrição</find>
       <find>valor</find>
       <find>Lista de</find>
@@ -72,7 +79,13 @@
       <find>$mes</find>
       <find>$</find>
       <find>popover-body-value</find>
+      <find>Fabri</find>
+      <find>Produ</find>
       <find>Insumos</find>
+      <find>Produt</find>
+      <find>produto</find>
+      <find>Produtos</find>
+      <find>Estoque</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -321,19 +334,19 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.PHP" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Fabricacao\view\fabricacao\index" />
-      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Entity" />
-      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module" />
-      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Produto\view\produto\index" />
-      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Produto\src\Model" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Insumo\view\insumo" />
       <recent name="C:\xampp2\htdocs\realtec-fabricacao\public\js" />
       <recent name="C:\xampp2\htdocs\realtec-fabricacao" />
       <recent name="C:\xampp2\htdocs\realtec-fabricacao\public\fonts" />
       <recent name="C:\xampp2\htdocs\realtec-fabricacao\public\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Fabricacao\view\fabricacao\index" />
+      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Entity" />
+      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module" />
+      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Produto\view\produto\index" />
+      <recent name="C:\xampp2\htdocs\realtec-fabricacao\module\Produto\src\Model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -363,18 +376,18 @@
       <workItem from="1566407321954" duration="24711000" />
       <workItem from="1566580283554" duration="1909000" />
       <workItem from="1566820296837" duration="37952000" />
-      <workItem from="1566902764067" duration="12798000" />
+      <workItem from="1566902764067" duration="13625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83404000" />
+    <option name="totallyTimeSpent" value="84231000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="38" width="1552" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496749" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496749" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -383,7 +396,7 @@
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.29160935" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29160935" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -731,13 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layout/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/argon-dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
@@ -793,17 +799,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/layout/layout.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="84" column="34" lean-forward="true" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/module/Inicial/view/inicial/index/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="25" column="160" selection-start-line="25" selection-start-column="160" selection-end-line="25" selection-end-column="160" />
+        <state relative-caret-position="163">
+          <caret line="76" column="98" selection-start-line="76" selection-start-column="98" selection-end-line="76" selection-end-column="98" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module/Inicial/src/Controller/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="118" column="100" selection-start-line="118" selection-start-column="100" selection-end-line="118" selection-end-column="100" />
+        <state relative-caret-position="273">
+          <caret line="194" column="21" selection-start-line="194" selection-start-column="21" selection-end-line="194" selection-end-column="21" />
           <folding>
             <element signature="e#311#342#0#PHP" expanded="true" />
           </folding>

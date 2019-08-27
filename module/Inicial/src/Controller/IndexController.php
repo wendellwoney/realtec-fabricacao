@@ -10,6 +10,7 @@ namespace Inicial\Controller;
 use Doctrine\ORM\EntityManager;
 use Fabricacao\Model\FabricacaoModelo;
 use Insumo\Model\InsumoEntradaModelo;
+use Produto\Model\ProdutoModelo;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
@@ -28,11 +29,15 @@ class IndexController extends AbstractActionController
 
         //Estoque Produtos
         $view->setVariable('estoqueProduto', $this->estoqueProdutos());
+
         //Grafico Fabricação
         $view->setVariable('gFabricacao', $this->graficoFabricacao());
         //Grafico Insumo
         $view->setVariable('gInsumo', $this->graficoInsumos());
-
+        //Insumos comprados
+        $view->setVariable('compraInsumo', $this->compraInsumoMes());
+        //Total produto
+        $view->setVariable('totalProduto', $this->totalProdutos());
         return $view;
     }
 
@@ -62,65 +67,72 @@ class IndexController extends AbstractActionController
 
     private function graficoFabricacao()
     {
-        $moth = [
-          '01' => 'Jan',
-          '02' => 'Fev',
-          '03' => 'Mar',
-          '04' => 'Abr',
-          '05' => 'Mai',
-          '06' => 'Jun',
-          '07' => 'Jul',
-          '08' => 'Ago',
-          '09' => 'Set',
-          '10' => 'Out',
-          '11' => 'Nov',
-          '12' => 'Dez',
-        ];
 
         $fabricacaoModelo = new FabricacaoModelo($this->entityManager);
         $fabricacao = $fabricacaoModelo->getList();
 
         $arrayGrafico = [];
         foreach ($fabricacao as $fabri) {
-            $ind = $moth[$fabri->getDataCadastro()->format('m')];
+            $ind = $fabri->getDataCadastro()->format('m');
             if (@count($arrayGrafico[$ind]) == 0) {
-                $arrayGrafico[$ind] =  ceil($fabri->getQuantidade());
+                $arrayGrafico[$ind] = ceil($fabri->getQuantidade());
             } else {
-                $arrayGrafico[$ind] =  ceil($arrayGrafico[$ind] + $fabri->getQuantidade());
+                $arrayGrafico[$ind] = ceil($arrayGrafico[$ind] + $fabri->getQuantidade());
             }
         }
+        ksort($arrayGrafico);
         return $arrayGrafico;
     }
 
     private function graficoInsumos()
     {
-        $moth = [
-            '01' => 'Jan',
-            '02' => 'Fev',
-            '03' => 'Mar',
-            '04' => 'Abr',
-            '05' => 'Mai',
-            '06' => 'Jun',
-            '07' => 'Jul',
-            '08' => 'Ago',
-            '09' => 'Set',
-            '10' => 'Out',
-            '11' => 'Nov',
-            '12' => 'Dez',
-        ];
-
         $insumoEntradaModelo = new InsumoEntradaModelo($this->entityManager);
         $insumosEntrada = $insumoEntradaModelo->getList();
 
         $arrayGraficoInsumo = [];
         foreach ($insumosEntrada as $entrada) {
-            $ind = $moth[$entrada->getDataEntrada()->format('m')];
+            $ind = $entrada->getDataEntrada()->format('m');
             if (@count($arrayGraficoInsumo[$ind]) == 0) {
-                $arrayGraficoInsumo[$ind] =  ceil($entrada->getQuantidade());
+                $arrayGraficoInsumo[$ind] = ceil($entrada->getValor());
             } else {
-                $arrayGraficoInsumo[$ind] =  ceil($arrayGraficoInsumo[$ind] + $entrada->getQuantidade());
+                $arrayGraficoInsumo[$ind] = ceil($arrayGraficoInsumo[$ind] + ($entrada->getValor()));
             }
         }
+        ksort($arrayGraficoInsumo);
         return $arrayGraficoInsumo;
+    }
+
+    private function compraInsumoMes()
+    {
+        $mes = date('m');
+        $mesAnterior = date('m', strtotime('-1 months', strtotime(date('Y-m-d'))));
+        $array = $this->graficoInsumos();
+
+        @$mesAtual = ($array[$mes]) ? $array[$mes] : 0;
+        @$mesAnteriorT = ($array[$mesAnterior]) ? $array[$mesAnterior] : 0;
+
+        if($mesAtual < $mesAnterior) {
+            $arrayReturn = [
+              'valor' => $mesAtual,
+              'porcentagem' => @($array[$mesAtual] == 0) ? '100' : (($array[$mesAtual] * 100)/$array[$mesAnteriorT]),
+              'tik' => 'dow'
+            ];
+        }
+
+        if($mesAtual > $mesAnterior) {
+            $arrayReturn = [
+                'valor' => $mesAtual,
+                'porcentagem' => @($array[$mesAnteriorT] == 0) ? '100' : (($array[$mesAnteriorT] * 100)/$array[$mesAtual]),
+                'tik' => 'up'
+            ];
+        }
+
+        return $arrayReturn;
+    }
+
+    private function totalProdutos()
+    {
+        $produtoModelo = new ProdutoModelo($this->entityManager);
+        return count($produtoModelo->getList());
     }
 }

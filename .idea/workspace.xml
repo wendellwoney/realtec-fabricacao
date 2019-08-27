@@ -18,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/module/Inicial/src/Controller/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="39" column="40" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="40" />
+            <state relative-caret-position="189">
+              <caret line="118" column="100" selection-start-line="118" selection-start-column="100" selection-end-line="118" selection-end-column="100" />
               <folding>
                 <element signature="e#311#342#0#PHP" expanded="true" />
               </folding>
@@ -30,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.phtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.phtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/Inicial/view/inicial/index/index.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="58" column="99" selection-start-line="58" selection-start-column="99" selection-end-line="58" selection-end-column="99" />
+            <state relative-caret-position="119">
+              <caret line="25" column="160" selection-start-line="25" selection-start-column="160" selection-end-line="25" selection-end-column="160" />
             </state>
           </provider>
         </entry>
@@ -130,8 +130,8 @@
         <option value="$PROJECT_DIR$/public/js/argon.min.js" />
         <option value="$PROJECT_DIR$/layout/layout.phtml" />
         <option value="$PROJECT_DIR$/public/js/argon-dashboard.js" />
-        <option value="$PROJECT_DIR$/module/Inicial/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/module/Inicial/view/inicial/index/index.phtml" />
+        <option value="$PROJECT_DIR$/module/Inicial/src/Controller/IndexController.php" />
       </list>
     </option>
   </component>
@@ -363,18 +363,18 @@
       <workItem from="1566407321954" duration="24711000" />
       <workItem from="1566580283554" duration="1909000" />
       <workItem from="1566820296837" duration="37952000" />
-      <workItem from="1566902764067" duration="10769000" />
+      <workItem from="1566902764067" duration="12798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81375000" />
+    <option name="totallyTimeSpent" value="83404000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="38" width="1552" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496749" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496749" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -383,7 +383,7 @@
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29160935" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.29160935" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -793,20 +793,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Inicial/src/Controller/IndexController.php">
+    <entry file="file://$PROJECT_DIR$/module/Inicial/view/inicial/index/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="39" column="40" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="40" />
-          <folding>
-            <element signature="e#311#342#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="25" column="160" selection-start-line="25" selection-start-column="160" selection-end-line="25" selection-end-column="160" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Inicial/view/inicial/index/index.phtml">
+    <entry file="file://$PROJECT_DIR$/module/Inicial/src/Controller/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="58" column="99" selection-start-line="58" selection-start-column="99" selection-end-line="58" selection-end-column="99" />
+        <state relative-caret-position="189">
+          <caret line="118" column="100" selection-start-line="118" selection-start-column="100" selection-end-line="118" selection-end-column="100" />
+          <folding>
+            <element signature="e#311#342#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -36,6 +36,8 @@ class IndexController extends AbstractActionController
         $view->setVariable('gInsumo', $this->graficoInsumos());
         //Insumos comprados
         $view->setVariable('compraInsumo', $this->compraInsumoMes());
+        //fabricação mês
+        $view->setVariable('fabricacaoMes', $this->fabricacaoMes());
         //Total produto
         $view->setVariable('totalProduto', $this->totalProdutos());
         return $view;
@@ -114,7 +116,7 @@ class IndexController extends AbstractActionController
         if($mesAtual < $mesAnterior) {
             $arrayReturn = [
               'valor' => $mesAtual,
-              'porcentagem' => @($array[$mesAtual] == 0) ? '100' : (($array[$mesAtual] * 100)/$array[$mesAnteriorT]),
+              'porcentagem' => @round(($mesAtual == 0) ? '100' : (($mesAnteriorT * 100)/$mesAtual),2),
               'tik' => 'dow'
             ];
         }
@@ -122,7 +124,7 @@ class IndexController extends AbstractActionController
         if($mesAtual > $mesAnterior) {
             $arrayReturn = [
                 'valor' => $mesAtual,
-                'porcentagem' => @($array[$mesAnteriorT] == 0) ? '100' : (($array[$mesAnteriorT] * 100)/$array[$mesAtual]),
+                'porcentagem' => @round(($mesAnteriorT == 0) ? '100' : (($mesAtual * 100)/$mesAnteriorT),2),
                 'tik' => 'up'
             ];
         }
@@ -134,5 +136,35 @@ class IndexController extends AbstractActionController
     {
         $produtoModelo = new ProdutoModelo($this->entityManager);
         return count($produtoModelo->getList());
+    }
+
+    private function fabricacaoMes()
+    {
+        $mes = date('m');
+        $mesAnterior = date('m', strtotime('-1 months', strtotime(date('Y-m-d'))));
+        $array = $this->graficoFabricacao();
+
+
+
+        @$mesAtual = ($array[$mes]) ? $array[$mes] : 0;
+        @$mesAnteriorT = ($array[$mesAnterior]) ? $array[$mesAnterior] : 0;
+
+        if($mesAtual < $mesAnterior) {
+            $arrayReturn = [
+                'valor' => $mesAtual,
+                'porcentagem' => @round(($mesAtual == 0) ? '100' : (($mesAnteriorT * 100)/$mesAtual),2),
+                'tik' => 'dow'
+            ];
+        }
+
+        if($mesAtual > $mesAnterior) {
+            $arrayReturn = [
+                'valor' => $mesAtual,
+                'porcentagem' => @round(($mesAnteriorT == 0) ? '100' : (($mesAtual * 100)/$mesAnteriorT), 2),
+                'tik' => 'up'
+            ];
+        }
+
+        return $arrayReturn;
     }
 }

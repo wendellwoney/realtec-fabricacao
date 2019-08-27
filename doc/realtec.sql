@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 27-Ago-2019 às 01:47
+-- Generation Time: 27-Ago-2019 às 19:37
 -- Versão do servidor: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -75,14 +75,6 @@ CREATE TABLE `insumo` (
   `data_remocao` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `insumo`
---
-
-INSERT INTO `insumo` (`id`, `nome`, `codigo`, `unidade_medida`, `valor_minimo`, `estoque`, `valor_medio`, `observacao`, `ativo`, `data_cadastro`, `data_atualizacao`, `data_remocao`) VALUES
-(1, 'CLORO', '0001', 'L', '20.00', '10.00', '1.00', NULL, '1', '2019-08-22 15:52:08', NULL, NULL),
-(2, 'Whey', '0002', 'KG', '200.00', '10.00', '1.00', 'Teste', '1', '2019-08-22 22:59:38', NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -100,14 +92,6 @@ CREATE TABLE `insumo_entrada` (
   `data_remocao` datetime DEFAULT NULL,
   `insumo_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `insumo_entrada`
---
-
-INSERT INTO `insumo_entrada` (`id`, `data_entrada`, `valor`, `quantidade`, `ativo`, `data_cadastro`, `data_atualizacao`, `data_remocao`, `insumo_id`) VALUES
-(3, '2019-08-26 15:45:15', '10.00', '10.00', '1', '2019-08-26 15:45:15', NULL, NULL, 1),
-(4, '2019-08-26 15:45:16', '1.00', '2.00', '0', '2019-08-26 15:45:16', NULL, '2019-08-26 16:42:55', 2);
 
 -- --------------------------------------------------------
 
@@ -127,13 +111,6 @@ CREATE TABLE `produto` (
   `unidade_medida` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `produto`
---
-
-INSERT INTO `produto` (`id`, `nome`, `codigo`, `descricao`, `ativo`, `data_cadastro`, `data_atualizacao`, `data_remocao`, `unidade_medida`) VALUES
-(2, 'Produto teste wendell', '0001', 'Produto teste wendell', '1', '0000-00-00 00:00:00', '2019-08-26 22:02:31', NULL, 'L');
-
 -- --------------------------------------------------------
 
 --
@@ -146,14 +123,6 @@ CREATE TABLE `produto_formula` (
   `insumo_id` int(11) NOT NULL,
   `produto_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `produto_formula`
---
-
-INSERT INTO `produto_formula` (`id`, `quantidade`, `insumo_id`, `produto_id`) VALUES
-(7, '5.00', 2, 2),
-(8, '4.00', 1, 2);
 
 --
 -- Indexes for dumped tables
@@ -211,37 +180,37 @@ ALTER TABLE `produto_formula`
 -- AUTO_INCREMENT for table `fabricacao`
 --
 ALTER TABLE `fabricacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `fabricacao_formula`
 --
 ALTER TABLE `fabricacao_formula`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `insumo`
 --
 ALTER TABLE `insumo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `insumo_entrada`
 --
 ALTER TABLE `insumo_entrada`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `produto_formula`
 --
 ALTER TABLE `produto_formula`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables

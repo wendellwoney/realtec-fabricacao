@@ -66,3 +66,11 @@ Basta copiar toda a pasta **realtec-fabricacao** para o diretório de instalaç�
 ```bash
     /DIR_INSTALACAO/xampp/htdocs
 ```
+
+## Sobre os Modulos da aplicação
+
+#### Modulo INICIAL
+
+Este modulo trás um amparato geral dos dados do sistema com alguns dados de acesso rápido.
+
+

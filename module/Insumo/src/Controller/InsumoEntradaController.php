@@ -83,33 +83,34 @@ class InsumoEntradaController extends AbstractActionController
         $entradaInsumoModelo = new InsumoEntradaModelo($this->entityManager);
         if ($this->getRequest()->isPost()) {
             foreach ($this->params()->fromPost('qtde') as $idInsumo => $qtde) {
-                $insumoCorrente = $insumoModelo->get($idInsumo);
-                $entradaInsumo = new EntradaInsumo();
-                $entradaInsumo->setDataCadastro(new \DateTime('now'));
-                $entradaInsumo->setDataEntrada(new \DateTime('now'));
-                $entradaInsumo->setValor($this->params()->fromPost('valor')[$idInsumo]);
-                $entradaInsumo->setQuantidade($qtde);
-                $entradaInsumo->setInsumo($insumoCorrente);
-                $entradaInsumo->setAtivo('1');
+                if ($qtde > 0) {
+                    $insumoCorrente = $insumoModelo->get($idInsumo);
+                    $entradaInsumo = new EntradaInsumo();
+                    $entradaInsumo->setDataCadastro(new \DateTime('now'));
+                    $entradaInsumo->setDataEntrada(new \DateTime('now'));
+                    $entradaInsumo->setValor($this->params()->fromPost('valor')[$idInsumo]);
+                    $entradaInsumo->setQuantidade($qtde);
+                    $entradaInsumo->setInsumo($insumoCorrente);
+                    $entradaInsumo->setAtivo('1');
 
-                $estoqueGeral = $insumoCorrente->getEstoqueGeral() + $qtde;
-                $valorProduto = $insumoCorrente->getValorMedio() * $insumoCorrente->getEstoqueGeral();
-                $insumoCorrente->setEstoqueGeral($estoqueGeral);
-                $valorUnitarioCompra = Funcoes::valorUnitario($this->params()->fromPost('valor')[$idInsumo], $qtde);
+                    $estoqueGeral = $insumoCorrente->getEstoqueGeral() + $qtde;
+                    $valorProduto = $insumoCorrente->getValorMedio() * $insumoCorrente->getEstoqueGeral();
+                    $insumoCorrente->setEstoqueGeral($estoqueGeral);
+                    $valorUnitarioCompra = Funcoes::valorUnitario($this->params()->fromPost('valor')[$idInsumo], $qtde);
 
-                $valorMedio = (Funcoes::valorUnitario(($valorProduto + ($valorUnitarioCompra * $qtde)), $estoqueGeral));
+                    $valorMedio = (Funcoes::valorUnitario(($valorProduto + ($valorUnitarioCompra * $qtde)), $estoqueGeral));
 
-                $insumoCorrente->setValorMedio($valorMedio);
+                    $insumoCorrente->setValorMedio($valorMedio);
 
-                //Cadastra nova entrada
-                try {
-                    $entradaInsumoModelo->create($entradaInsumo);
-                    $insumoModelo->update($insumoCorrente);
-                    $view->setVariable('msgs', 'Entrada Cadastrada!');
-                } catch (\Exception $e) {
-                    $view->setVariable('msge', $e->getMessage());
+                    //Cadastra nova entrada
+                    try {
+                        $entradaInsumoModelo->create($entradaInsumo);
+                        $insumoModelo->update($insumoCorrente);
+                        $view->setVariable('msgs', 'Entrada Cadastrada!');
+                    } catch (\Exception $e) {
+                        $view->setVariable('msge', $e->getMessage());
+                    }
                 }
-
             }
 
         }

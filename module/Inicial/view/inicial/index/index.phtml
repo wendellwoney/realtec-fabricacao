@@ -139,7 +139,7 @@
                 <div class="card-header border-0">
                     <div class="row align-items-center">
                         <div class="col">
-                            <h3 class="mb-0">Estoque de Produtos</h3>
+                            <h3 class="mb-0">Estoque de Produtos Fabricados</h3>
                         </div>
                     </div>
                 </div>
@@ -149,69 +149,183 @@
                         <thead class="thead-light">
                         <tr>
                             <th scope="col">Produto</th>
-                            <th scope="col">Total Estoque Produzido</th>
-                            <th scope="col">Valor Médio</th>
+                            <th scope="col" class="text-center">Total Estoque Produzido</th>
+                            <th scope="col" class="text-center">Valor Médio</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">
-                                Produto I
-                            </th>
-                            <td>
-                                4,569
-                            </td>
-                            <td>
-                                R$ 3,40
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                Produto II
-                            </th>
-                            <td>
-                                3,985
-                            </td>
-                            <td>
-                                R$ 3,40
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                Produto III
-                            </th>
-                            <td>
-                                3,513
-                            </td>
-                            <td>
-                                R$ 3,40
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                Produto IV
-                            </th>
-                            <td>
-                                2,050
-                            </td>
-                            <td>
-                                R$ 3,40
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                Produto V
-                            </th>
-                            <td>
-                                1,795
-                            </td>
-                            <td>
-                                R$ 3,40
-                            </td>
-                        </tr>
+                        <?php foreach ($this->estoqueProduto as $estoque):?>
+                            <tr>
+                                <th scope="row">
+                                    <?= $estoque['nome'];?>
+                                </th>
+                                <td class="text-center">
+                                    <?= $estoque['totalEstoque'];?>
+                                </td>
+                                <td class="text-center">
+                                    <?= 'R$ ' . number_format(($estoque['valor']/$estoque['totalEstoque']), 2, '.', '') ?>
+                                </td>
+                            </tr>
+                        <?php endforeach;?>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        //
+        // Sales chart
+        //
+
+        var SalesChart = (function() {
+
+            // Variables
+
+            var $chart = $('#chart-sales');
+
+
+            // Methods
+
+            function init($chart) {
+
+                var salesChart = new Chart($chart, {
+                    type: 'line',
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                gridLines: {
+                                    lineWidth: 1,
+                                    color: Charts.colors.gray[900],
+                                    zeroLineColor: Charts.colors.gray[900]
+                                },
+                                ticks: {
+                                    callback: function(value) {
+                                        if (!(value % 10)) {
+                                            return  value ;
+                                        }
+                                    }
+                                }
+                            }]
+                        },
+                        tooltips: {
+                            callbacks: {
+                                label: function(item, data) {
+                                    var label = data.datasets[item.datasetIndex].label || '';
+                                    var yLabel = item.yLabel;
+                                    var content = '';
+
+                                    if (data.datasets.length > 1) {
+                                        content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+                                    }
+
+                                    content += '<span class="popover-body-value">' + yLabel + '</span>';
+                                    return content;
+                                }
+                            }
+                        }
+                    },
+                    data: {
+                        labels: [<?php $tot = 0; foreach ($this->gFabricacao as $mes => $valor): $tot++;?>'<?= $mes;?>'<?php if($tot < count($this->gFabricacao)){echo ',';}?><?php endforeach;?>],
+                        datasets: [{
+                            label: 'Performance',
+                            data: [<?php $tot = 0; foreach ($this->gFabricacao as $mes => $valor): $tot++;?><?= $valor;?><?php if($tot < count($this->gFabricacao)){echo ',';}?><?php endforeach;?>]
+                        }]
+                    }
+                });
+
+                // Save to jQuery object
+
+                $chart.data('chart', salesChart);
+
+            };
+
+
+            // Events
+
+            if ($chart.length) {
+                init($chart);
+            }
+
+        })();
+    </script>
+
+    <script>
+        var OrdersChart = (function() {
+
+            //
+            // Variables
+            //
+
+            var $chart = $('#chart-orders');
+            var $ordersSelect = $('[name="ordersSelect"]');
+
+
+            //
+            // Methods
+            //
+
+            // Init chart
+            function initChart($chart) {
+
+                // Create chart
+                var ordersChart = new Chart($chart, {
+                    type: 'bar',
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                gridLines: {
+                                    lineWidth: 1,
+                                    color: '#dfe2e6',
+                                    zeroLineColor: '#dfe2e6'
+                                },
+                                ticks: {
+                                    callback: function(value) {
+                                        if (!(value % 10)) {
+                                            //return '$' + value + 'k'
+                                            return value
+                                        }
+                                    }
+                                }
+                            }]
+                        },
+                        tooltips: {
+                            callbacks: {
+                                label: function(item, data) {
+                                    var label = data.datasets[item.datasetIndex].label || '';
+                                    var yLabel = item.yLabel;
+                                    var content = '';
+
+                                    if (data.datasets.length > 1) {
+                                        content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+                                    }
+
+                                    content += '<span class="popover-body-value">' + yLabel + '</span>';
+
+                                    return content;
+                                }
+                            }
+                        }
+                    },
+                    data: {
+                        labels: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                        datasets: [{
+                            label: 'Sales',
+                            data: [55, 20, 30, 22, 17, 29]
+                        }]
+                    }
+                });
+
+                // Save to jQuery object
+                $chart.data('chart', ordersChart);
+            }
+
+
+            // Init chart
+            if ($chart.length) {
+                initChart($chart);
+            }
+
+        })();
+    </script>

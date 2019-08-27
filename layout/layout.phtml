@@ -21,7 +21,12 @@
     <script src="<?= $this->basePath('js/jquery.dataTables.min.js'); ?>"></script>
     <!-- Maskmoney -->
     <script src="<?= $this->basePath('js/jquery.mask.min.js'); ?>"></script>
-
+    <script src="<?= $this->basePath('js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js'); ?>"></script>
+    <!--   Optional JS   -->
+    <script src="<?= $this->basePath('js/plugins/chart.js/dist/Chart.min.js'); ?>"></script>
+    <script src="<?= $this->basePath('js/plugins/chart.js/dist/Chart.extension.js'); ?>"></script>
+    <!--   Argon JS   -->
+    <script src="<?= $this->basePath('js/argon-dashboard.js'); ?>"></script>
 </head>
 
 <body class="">
@@ -105,12 +110,6 @@
     <?= $this->content ?>
     <p></p>
 </div>
-<script src="<?= $this->basePath('js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js'); ?>"></script>
-<!--   Optional JS   -->
-<script src="<?= $this->basePath('js/plugins/chart.js/dist/Chart.min.js'); ?>"></script>
-<script src="<?= $this->basePath('js/plugins/chart.js/dist/Chart.extension.js'); ?>"></script>
-<!--   Argon JS   -->
-<script src="<?= $this->basePath('js/argon-dashboard.min.js?v=1.1.0'); ?>"></script>
 <script>
     $(document).ready( function () {
         $('.dataTable').DataTable();
